@@ -59,7 +59,7 @@ body {
 }
 
 .header {
-    height: 60vh !important;
+    height: 50vh !important;
     background: url(img/a.png) no-repeat center;
     background-size: cover;
 }
@@ -71,7 +71,12 @@ body {
     text-transform: uppercase;
     color: rgb(0, 0, 0);
 }
+.lol{
+    position: relative;
+	width: 30%;
+position: relative;
 
+}
 p {
     margin-bottom: 40px;
     font-size: 18px;

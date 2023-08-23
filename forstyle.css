@@ -8,8 +8,12 @@
     background-image: url('img/M1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
   }
-  
+  .lol{
+    text-align: center;
+    
+  }
   .form-register {
     width: 400px;
     background: #25a8ff;
@@ -19,7 +23,7 @@
     border-radius: 4px;
     font-family: 'calibri';
     color: rgb(0, 0, 0);
-    box-shadow: 7px 13px 37px #0077ffa8;
+    box-shadow: 7px 13px 37px #0077ffbd;
   
   }
   
