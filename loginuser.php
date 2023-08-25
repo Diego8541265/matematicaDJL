@@ -12,5 +12,16 @@ if(!empty($_POST['nombres']) && !empty($_POST['apellidos']) && !empty($_POST['co
 
     $sql = "INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contraseña) VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:pass)";
     $stms = $conexion->prepare($sql);
+    $stms->bindParam(":nom",$name);
+    $stms->bindParam(":apell",$apell);
+    $stms->bindParam(":email",$email);
+    $stms->bindParam(":tipdoc",$tipDoc);
+    $stms->bindParam(":numdoc",$numDoc);
+    $stms->bindParam(":pass",$pass);
+    if($stmt->execute()){
+        header("location: loginuser.php");
+    }else print ("Error en la consulta");
+}else{
+    print("Debe completar todos los campos del formulario");
 }
 ?>
