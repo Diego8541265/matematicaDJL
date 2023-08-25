@@ -1,5 +1,5 @@
 <?php
 
 require_once("conexion.php");
-if(!empty())
+if(!empty($_POST['']))
 ?>
