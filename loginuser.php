@@ -8,6 +8,6 @@ if(!empty($_POST['nombres']) && !empty($_POST['apellidos']) && !empty($_POST['co
     $name = $_POST['correo'];
     $name = $_POST['tipDoc'];
     $name = $_POST['numDoc'];
-    $name = $_POST[''];
+    $name = $_POST['contraseña'];
 }
 ?>
