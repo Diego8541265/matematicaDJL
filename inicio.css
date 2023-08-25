@@ -1,5 +1,6 @@
 body{
-    background: url(img/a.png);
+    background: url(img/a.png) no-repeat;
+    background-size: cover;
 }
 .head {
     display: flex;
