@@ -34,3 +34,27 @@ div.principal{
     margin-right: 13%;
     font-size: 50px;
 }
+.secundario3{
+    padding-bottom: 20%;
+    background-color: rgb(199, 105, 105);
+    border: 1px solid black;
+    width: 50%;
+    float: left;
+    margin-top: 10%;
+    padding: 3%;
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 50px;
+}
+.secundario4{
+    padding-bottom: 20%;
+    background-color: rgb(199, 105, 105);
+    border: 1px solid black;
+    width: 50%;
+    float: left;
+    margin-top: 10%;
+    padding: 3%;
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 50px;
+}
