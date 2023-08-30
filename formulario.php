@@ -18,7 +18,7 @@
     
 
 
-<select class="controls" name="typeDocument" id="typeDocument" placeholder="typeDocument">tipo de Documento
+<select class="controls" name="tipDoc" id="typeDocument" placeholder="typeDocument">tipo de Documento
   
   <option value="CC">CC</option>
 <option value="TI">TI</option>

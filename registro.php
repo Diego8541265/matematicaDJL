@@ -9,8 +9,8 @@
 </head>
 <body>
   <?php include("loginuser.php") ?>
+  <form action="loginuser.php" method="POST">
   <section class="form-register">
-    <form action="loginuser.php" method="POST">
     <h4>Formulario Registro</h4>
     <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
     <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
@@ -27,7 +27,7 @@
 
 
     <input class="controls" type="" name="numDoc" id="correo" placeholder="numero de documento">
-    <input class="controls" type="password" name="contraseña" id="correo" placeholder="Ingrese su Contraseña">
+    <input class="controls" type="password" name="contrasena" id="correo" placeholder="Ingrese su Contraseña">
     <input  class="botons" type="submit" value="Registrar" > 
     <p><a href="#">¿Ya tengo Cuenta?</a></p>
   </section>
