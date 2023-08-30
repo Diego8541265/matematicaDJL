@@ -8,8 +8,9 @@
   <title>Formulario Registro</title>
 </head>
 <body>
+  <?php include("loginuser.php") ?>
   <section class="form-register">
-    <form action="loginuser.php" method="post">
+    <form action="loginuser.php" method="POST">
     <h4>Formulario Registro</h4>
     <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
     <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
