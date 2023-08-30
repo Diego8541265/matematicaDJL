@@ -10,7 +10,7 @@ if(!empty($_POST['nombres']) && !empty($_POST['apellidos']) && !empty($_POST['co
     $numDoc = $_POST['numDoc'];
     $pass = $_POST['contraseña'];
 
-    $sql = "INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contraseña) VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:pass)";
+    $sql = "INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena) VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:pass)";
     $stms = $conexion->prepare($sql);
     $stms->bindParam(":nom",$name);
     $stms->bindParam(":apell",$apell);
