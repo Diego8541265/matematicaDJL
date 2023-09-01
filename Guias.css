@@ -43,7 +43,9 @@ body {
 
 
 div.blueTable {
-    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17%;
     margin-top: 10%;
     position: absolute;
     background-color: #c25b5b;
@@ -85,6 +87,8 @@ div.blueTable {
   .divTable{ display: table; }
   .divTableRow { display: table-row; }
   .divTableHeading { display: table-header-group;}
-  .divTableCell, .divTableHead { display: table-cell;}
+  .divTableCell, .divTableHead { display: table-cell;
+width: 100%;
+}
   .divTableHeading { display: table-header-group;}
   .divTableFoot { display: table-footer-group;}
