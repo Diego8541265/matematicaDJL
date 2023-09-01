@@ -19,7 +19,7 @@ if(!empty($_POST['nombres']) && !empty($_POST['apellidos']) && !empty($_POST['co
     $stms->bindParam(":numdoc",$numDoc);
     $stms->bindParam(":pass",$pass);
     if($stms->execute()){
-        header("location: conexion.php");
+        header("location: inicio_sesion.html");
     }else print ("Error en la consulta");
 }else{
     print("Debe completar todos los campos del formulario");
