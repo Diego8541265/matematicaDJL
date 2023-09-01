@@ -36,26 +36,54 @@ body {
     text-transform: uppercase;
     font-size: 20px;
 }
-
 .navbar a:hover {
     background: #1985ff;
 }
-div.principal{
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    font-size: 75px;
-}
-.secundario{
-    padding-bottom: 20%;
-    background-color: rgb(199, 105, 105);
-    border: 1px solid black;
-    width: 50%;
-    float: left;
+
+
+
+div.blueTable {
     margin-top: 10%;
-    padding: 3%;
-    margin-left: 13%;
-    margin-right: 13%;
-    font-size: 50px;
-}
+    position: absolute;
+    background-color: #c25b5b;
+    width: 65%;
+    height: 300px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  .divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
+    border: 1px solid #000000;
+    padding: 3px 1px;
+  }
+  .divTable.blueTable .divTableCell {
+    font-size: 13px;
+  }
+  .divTable.blueTable .divTableRow:nth-child(even) {
+    background: #D0E4F5;
+  }
+  .blueTable .tableFootStyle {
+    font-size: 14px;
+  }
+  .blueTable .tableFootStyle .links {
+       text-align: right;
+  }
+  .blueTable .tableFootStyle .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+  .blueTable.outerTableFooter {
+    border-top: none;
+  }
+  .blueTable.outerTableFooter .tableFootStyle {
+    padding: 3px 5px; 
+  }
+  /* DivTable.com */
+  .divTable{ display: table; }
+  .divTableRow { display: table-row; }
+  .divTableHeading { display: table-header-group;}
+  .divTableCell, .divTableHead { display: table-cell;}
+  .divTableHeading { display: table-header-group;}
+  .divTableFoot { display: table-footer-group;}
