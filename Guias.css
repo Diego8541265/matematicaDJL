@@ -40,9 +40,22 @@ body {
 .navbar a:hover {
     background: #1985ff;
 }
-
-.header {
+div.principal{
+    width: 100%;
+    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    font-size: 75px;
+}
+.secundario{
+    padding-bottom: 20%;
+    background-color: rgb(199, 105, 105);
+    border: 1px solid black;
+    width: 50%;
+    float: left;
+    margin-top: 10%;
+    padding: 3%;
+    margin-left: 13%;
+    margin-right: 13%;
+    font-size: 50px;
 }
