@@ -29,7 +29,7 @@
     <input class="controls" type="" name="numDoc" id="correo" placeholder="numero de documento">
     <input class="controls" type="password" name="contrasena" id="correo" placeholder="Ingrese su Contraseña">
     <input  class="botons" type="submit" value="Registrar" > 
-    <p><a href="#">¿Ya tengo Cuenta?</a></p>
+    <p><a href="inicio_sesion.html">¿Ya tengo Cuenta?</a></p>
   </section>
 </form>
 
