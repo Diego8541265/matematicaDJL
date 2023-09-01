@@ -78,6 +78,7 @@ text-transform: uppercase;
 }
 
 
+
 section::before {
 	content: '';
 	position: absolute;
@@ -85,18 +86,23 @@ section::before {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	
 	clip-path: circle(30% at right 70%);
 }
-
+.djl{
+padding: 1%;
+display: flex;
+}
+.parr{
+	margin: 1%;
+}
 .container {
 	position: relative;
 	z-index: 1;
 	display: flex;
-	
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 60px 0;
+	padding: 25px;
 }
 
 .container .card {
