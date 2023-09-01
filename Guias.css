@@ -88,7 +88,8 @@ div.blueTable {
   .divTableRow { display: table-row; }
   .divTableHeading { display: table-header-group;}
   .divTableCell, .divTableHead { display: table-cell;
-width: 100%;
+width: 40%;
+margin: 10%;
 }
   .divTableHeading { display: table-header-group;}
   .divTableFoot { display: table-footer-group;}
