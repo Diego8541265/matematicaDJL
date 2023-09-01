@@ -43,6 +43,7 @@ body {
 
 
 div.blueTable {
+    margin-left: 20%;
     margin-top: 10%;
     position: absolute;
     background-color: #c25b5b;
