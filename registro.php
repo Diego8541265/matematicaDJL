@@ -8,7 +8,7 @@
   <title>Formulario Registro</title>
 </head>
 <body>
-  <?php include("loginuser.php") ?>
+  
   <form action="loginuser.php" method="POST">
   <section class="form-register">
     <h4>Formulario Registro</h4>
@@ -30,8 +30,8 @@
     <input class="controls" type="password" name="contrasena" id="correo" placeholder="Ingrese su Contraseña">
     <input  class="botons" type="submit" value="Registrar" > 
     <p><a href="inicio_sesion.html">¿Ya tengo Cuenta?</a></p>
+    <?php include("loginuser.php") ?>
   </section>
 </form>
-
 </body>
 </html>
