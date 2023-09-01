@@ -80,6 +80,7 @@ text-transform: uppercase;
 }
 
 
+
 section::before {
 	content: '';
 	position: absolute;
@@ -95,10 +96,10 @@ section::before {
 	position: relative;
 	z-index: 1;
 	display: flex;
-	
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 60px 0;
+	padding: 25px;
 }
 
 .container .card {
