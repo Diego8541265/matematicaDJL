@@ -17,7 +17,7 @@ body{
     margin-right: 10px;
 }
 .logo {
-    margin-left: 30px;
+    padding: 20px 20px;
 }
 
 .logo a {
@@ -104,7 +104,7 @@ display: flex;
 	margin: 60px 0;
 	padding: 25px;
 }
-
+/* CUADROS */
 .container .card {
 	position: relative;
 	width: 300px;
@@ -117,6 +117,12 @@ display: flex;
 	justify-content: center;
 	align-items: center;
 	backdrop-filter: blur(10px);
+}
+/* FIN CUADROS */
+p {
+    font-size: 40px;
+    color: rgb(51, 49, 49);
+    padding: 100px;
 }
 
 .container .card .content {
