@@ -22,11 +22,11 @@ body {
     margin-right: 10px;
 }
 .logo {
+  font-size: 20px;
     margin-left: 30px;
     width: 200px;
-    height: 63px;
-    margin-top: 0%;
-    background-color: #ff3232;
+    margin-top: 16px;
+    background-color: #3269ff;
     text-align: center;
 }
 
