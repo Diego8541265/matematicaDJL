@@ -119,6 +119,12 @@ display: flex;
 	backdrop-filter: blur(10px);
 }
 /* FIN CUADROS */
+p {
+    font-size: 40px;
+    color: rgb(51, 49, 49);
+    padding: 100px;
+}
+
 .container .card .content {
 	position: relative;
 	display: flex;
