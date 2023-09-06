@@ -7,36 +7,33 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
 .head {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     height: 63px;
     background: #3269ff;
     position: fixed;
     width: 100%;
     z-index: 100;
-    margin-left: 0%;
 }
 .navbar {
     display: flex;
     margin-right: 10px;
 }
 .logo {
-  font-size: 20px;
     margin-left: 30px;
-    width: 200px;
-    margin-top: 16px;
-    background-color: #3269ff;
-    text-align: center;
 }
-
 .logo a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     font-size: 20px;
 }
-
 .navbar a {
     display: block;
     padding: 20px 20px;
@@ -52,7 +49,7 @@ body {
   position: absolute;
   width: 100%;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 900px;
 }
 .boton{
   padding: 5%;
