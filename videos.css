@@ -5,8 +5,9 @@
 }
 
 body{
-    background: url(img/a.png) no-repeat;
+    background: url(#) no-repeat;
     background-size: cover;
+    color: white;
 }
 .head {
     display: flex;
@@ -43,16 +44,6 @@ body{
 }
 
 /* APARTADO VIDEO */
-.content {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    font-size: 30px;
-}
-
 
 .parr{
 	margin: 1%;
@@ -63,10 +54,7 @@ p {
     padding: 100px;
 }
 .img{
-    position: relative;
-	width: 220px;
-	height: 200px;
-	overflow: hidden;
-	border-radius: 12px;
-
+  width: 560;
+  height: 315;
 }
+he
