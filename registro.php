@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="forstyle.css">
+   <!-- Logo -->
+   <link rel="shortcut icon" href="img/logo2.ico">
+    <link rel="icon" sizes="192x192" href="img/logo2.ico">
+    <link rel="favicon" href="img/logo2.ico">
+    <link rel="apple-touch-icon" href=" img/logo2.ico">
+    <!-- Fin codigo del Logo -->
   <title>Formulario Registro</title>
 </head>
 <body>
