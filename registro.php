@@ -31,7 +31,7 @@
     <input  class="botons" type="submit" value="Registrar" > 
     <p><a href="inicio_sesion.html">¿Ya tengo Cuenta?</a></p>
     <?php include("loginuser.php") ?>
-  </section>
+    </section>
 </form>
 </body>
 </html>
