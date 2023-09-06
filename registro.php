@@ -29,7 +29,7 @@
     <input class="controls" type="" name="numDoc" id="correo" placeholder="numero de documento">
     <input class="controls" type="password" name="contrasena" id="correo" placeholder="Ingrese su Contraseña">
     <input type="submit" value="registrarte" class="button">
-    <p><a href="inicio_sesion.html">¿Ya tengo Cuenta?</a></p>
+    <p><a href="inicio_sesion.html">Iniciar Sesión</a></p>
     <?php include("loginuser.php") ?>
     </section>
 </form>
