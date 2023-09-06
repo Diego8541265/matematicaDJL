@@ -42,7 +42,23 @@ body{
     font-size: 20px;
 }
 
+/* APARTADO VIDEO */
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+}
 
 
-
-
+.parr{
+	margin: 1%;
+}
+p {
+    font-size: 40px;
+    color: rgb(51, 49, 49);
+    padding: 100px;
+}
