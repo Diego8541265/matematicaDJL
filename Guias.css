@@ -1,5 +1,5 @@
 body {
-    background-image: url("img/fondo.png");
+    background-image: url("img/M1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -11,6 +11,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 100;
+    margin-left: 0%;
 }
 
 .navbar {
@@ -38,4 +39,16 @@ body {
 }
 .navbar a:hover {
     background: #1985ff;
+}
+.principal{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+}
+.boton{
+  padding: 5%;
+  margin: 30px;
+  background-color: #6aa6ff;
+  font-size: 50px;
 }
