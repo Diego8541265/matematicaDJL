@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url(#) no-repeat;
+    background: url(img/fondo.png) no-repeat;
     background-size: cover;
     color: white;
 }
@@ -46,15 +46,21 @@ body{
 /* APARTADO VIDEO */
 
 .parr{
-	margin: 1%;
+	margin:1%;
+    
    
 }
 p {
     font-size: 40px;
     color: rgb(51, 49, 49);
-    padding: 100px;
+    padding: 222px;
+    position: relative;
+    text-align: start;
+   
+   
 }
 .img{
-  width: 560;
-  height: 315;
+padding: 200px;
+height: 1px;
+size: 200px;
 }
