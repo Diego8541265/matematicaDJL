@@ -1,6 +1,7 @@
 body{
-    background: url(img/) no-repeat;
+    background: url(img/fondo.png) no-repeat;
     background-size: cover;
+	max-height: max-content;
 }
 .head {
     display: flex;
@@ -47,13 +48,13 @@ body{
 
 }
 p{
-	font-size: 35px;
+	font-size: 30px;
 	color: #000000;
 	position: relative;
 	width: 800px;
-	height: 400px;
+	height: 40px;
 	border-radius: 15px;
-	backdrop-filter: blur(10px);
+	
 }
 
 .mnp{
@@ -94,6 +95,7 @@ display: flex;
 }
 .parr{
 	margin: 1%;
+
 }
 .container {
 	position: relative;
@@ -121,8 +123,8 @@ display: flex;
 /* FIN CUADROS */
 p {
     font-size: 40px;
-    color: rgb(51, 49, 49);
-    padding: 100px;
+    color: rgb(0, 0, 0);
+    padding: 90px;
 }
 
 .container .card .content {
@@ -131,7 +133,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	transition: 0.5s;
+	transition: 0.4s;
 }
 
 .container .card:hover .content {
