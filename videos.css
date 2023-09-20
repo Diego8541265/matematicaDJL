@@ -45,19 +45,17 @@ body{
 
 /* APARTADO VIDEO */
 
-
-   
-
 p {
+    margin-top: 65%;
     font-size: 40px;
     color: rgb(51, 49, 49);
-    padding: 132px;
+    padding: 100px;
     position: relative;
     text-align: start;
+    padding-left: 0%;
    
 }
 .img{
-padding: 200px;
-height: 1px;
-
+    margin-top: 18%;
+    margin-right: 20%;
 }

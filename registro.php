@@ -45,7 +45,6 @@
 </select>
 
 
-
     <input class="controls" type="" name="numDoc" id="correo" placeholder="numero de documento">
     <input class="controls" type="password" name="contrasena" id="correo" placeholder="Ingrese su Contraseña">
     <input type="submit" value="registrarse" class="button">
