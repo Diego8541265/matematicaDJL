@@ -21,13 +21,14 @@
 </div>
 
 <nav class="navbar">
-    <a href="Apartado_Guias.html">Inicio</a>
+    <a href="index.html">Inicio</a>
     <a href="inicio_sesion.html">Inicio de sesión</a>
  
 
 </nav>
 
 </div>
+  
   <form action="loginuser.php" method="POST">
   <section class="form-register">
     <h4>Formulario Registro</h4>
