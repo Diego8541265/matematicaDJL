@@ -10,7 +10,7 @@ body{
 /* Borde azul */
 .head {
     display: flex;
-    height: 2px;
+    height: 1px;
     background: #3269ff;
     width: 100%;
 }
@@ -79,7 +79,7 @@ display: flex;
 text-transform: uppercase;
 
 }
-/* CHAT*/
+
 
 * {
 	margin: 0;
