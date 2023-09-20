@@ -7,7 +7,7 @@ body{
     display: flex;
     background: #3269ff;
 }
-
+/* Borde azul */
 .head {
     display: flex;
     height: 2px;
@@ -15,11 +15,17 @@ body{
     position: fixed;
     width: 100%;
 }
+/* Fin codigo borde azul */
 
+
+/* botones */
 .navbar {
     display: flex;
 	margin-left: 77%;
 }
+/* fin botones */
+
+
 .logo {
     padding: 20px 20px;
 }
