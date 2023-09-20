@@ -77,17 +77,6 @@ text-transform: uppercase;
 	padding: 0;
 }
 
-
-
-section::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	clip-path: circle(30% at right 70%);
-}
 .djl{
 padding: 1%;
 display: flex;
