@@ -86,7 +86,7 @@ text-transform: uppercase;
 	padding: 0;
 }
 .djl{
-margin-right: 20px;
+margin-right: 10px;
 display: flex;
 }
 .parr{
@@ -99,7 +99,7 @@ display: flex;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	margin: 60px 0;
+	margin-left: 150px ;
 	padding: 25px;
 }
 /* CUADROS */
