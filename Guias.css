@@ -58,8 +58,9 @@ body {
   background-color: #6aa6ff;
   font-size: 25px;
   border-radius: 15px;
-  background-image: url("img/logo_guias-removebg-preview.png");
+  background-image: url("img/logo_guias.png");
   background-position: 5px;
   background-repeat: no-repeat;
   color: #ffffff;
+  text-align: center;
 }
