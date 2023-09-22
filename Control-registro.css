@@ -45,9 +45,3 @@
   .navbar a:hover {
       background: #1985ff;
   }
-  .principal{
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin-top: 900px;
-  }
