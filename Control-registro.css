@@ -44,5 +44,7 @@
   .navbar a:hover {
       background: #1985ff;
   }
-
+  .cont{
+    padding-top: 100px;
+  }
   /* tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ */
