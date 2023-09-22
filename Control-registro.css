@@ -3,6 +3,7 @@
     padding: 0;
   }
   body {
+      background-image: url(img/fondo.png);
       background-size: cover;
       background-repeat: no-repeat;
   }
@@ -43,6 +44,10 @@
   }
   .navbar a:hover {
       background: #1985ff;
+  }
+  .cont{
+    padding-top: 180px;
+    font-size: 25px;
   }
 
   /* tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ */
