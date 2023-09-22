@@ -35,22 +35,21 @@
 </head>
 <body>
 <?php
-if(isset($_SESSION['nombre'])){
-echo "<p>Has iniciado sesion como: " . $_SESSION['nombre'] . "";
-echo "<p><a href='CerrarSesion.php'>Cerrar Sesion</a></p>";
-echo "<br><p><a href='PanelControl.php'>Ir al panel de control</a>";
-}else {
+// Esto devolverá todos los archivos de esa carpeta
+$archivos = scandir("subidas");
+$num=0;
+for ($i=2; $i<count($archivos); $i++)
+{$num++;
 ?>
-<h2>Creando la sesion</h2>
-<form action="PanelControl.php" method="POST">
-<p>Nombres:</p>
-<p><input type="text" placeholder="Ingrese su Nombre" name="nombre" required/></p>
-<p><input type="submit" value="Crear Sesion" /></p>
-</form>
-<?php
-}
-?>
-
+<!-- Visualización del nombre del archivo !-->
+         
+    <tr>
+      <th scope="row"><?php echo $num;?></th>
+      <td><?php echo $archivos[$i]; ?></td>
+      <td><a title="Descargar Archivo" href="subidas/<?php echo $archivos[$i]; ?>" download="<?php echo $archivos[$i]; ?>" style="color: blue; font-size:18px;"> <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> </a></td>
+      <td><a title="Eliminar Archivo" href="Eliminar.php?name=subidas/<?php echo $archivos[$i]; ?>" style="color: red; font-size:18px;" onclick="return confirm('Esta seguro de eliminar el archivo?');"> <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> </a></td>
+    </tr>
+ <?php }?>
 </body>
 </html>
   
