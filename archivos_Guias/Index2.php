@@ -12,7 +12,7 @@
         <input type="file" name="file">
         <input type="submit" value="cargar Archivos">
     </form>
-    
+    <!-- https://www.baulphp.com/subir-y-descargar-archivos-php-ejemplo-completo/#estructura_del_sistema_subir_y_descargar_archivos_php -->
     <?php
 // Esto devolverá todos los archivos de esa carpeta
 $archivos = scandir("subidas");
@@ -21,7 +21,7 @@ for ($i=2; $i<count($archivos); $i++)
 {$num++;
 ?>
 <!-- Visualización del nombre del archivo !-->
-         
+        
     <tr>
       <th scope="row"><?php echo $num;?></th>
       <td><?php echo $archivos[$i]; ?></td>
