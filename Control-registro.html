@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,9 +27,25 @@
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
 <div class="cont">
     <h2>Control de Registro de Usuarios</h2>
-    <div class="barra_buscador">
-<form action="" class="formulario"></form>
+    <div class="barra__buscador">
+        <form action="" class="formulario" method="post">
+           <input type="text" name="buscar" placeholder="buscar nombre o apellidos" class="input__text">
+           <input type="submit" class="btn" name="btn_buscar" value="Buscar">
+        </form>
     </div>
+    <table>
+    <tr class="head2">
+        <td>id_usuario</td>
+        <td>Nombres</td>
+        <td>Apellidos</td>
+        <td>Correo</td>
+        <td>id_tipdoc</td>
+        <td>numDoc</td>
+        <td>contraseña</td>
+        <td colspan="2">Acción</td>
+    </tr>
+    
+</table>
 </div>
 </body>
 </html>
