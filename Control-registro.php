@@ -1,3 +1,13 @@
+<?php
+
+include_once 'conexion.php';
+
+$sentencia_select=$con->prepare('SELECT *FROM usuario ORDER BY id DESC');
+$sentencia_select->execute();
+$resultado=$sentencia_select->fetchAll();
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +54,19 @@
         <td>contraseña</td>
         <td colspan="2">Acción</td>
     </tr>
-    
+    <?php foreach($resultado as $fila):?>
+    <tr>
+        <td><?php echo $resultado['id_usuario']; ?>/td>
+        <td><?php echo $resultado['Nombre']; ?>/td>
+        <td><?php echo $resultado['Apellidos']; ?>/td>
+        <td><?php echo $resultado['Correo']; ?>/td>
+        <td><?php echo $resultado['id_tipdoc']; ?>/td>
+        <td><?php echo $resultado['numDoc']; ?>/td>
+        <td><?php echo $resultado['contrasena']; ?>/td>
+        <td><a href="update.php?id=<?php echo $fila"></a></td>
+    </tr>
+  <?php endforeach ?>
+
 </table>
 </div>
 </body>
