@@ -162,10 +162,10 @@ table{
     border-collapse: collapse;
 }
 
-table .head{
+table .head2{
     background: rgb(3, 113, 163);
 }
-table .head td{
+table .head2 td{
     color: #fff;
     font-family: 'Arial',sans-serif;
     font-weight: bold;
