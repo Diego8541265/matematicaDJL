@@ -21,7 +21,7 @@ $resultado=$sentencia_select->fetchAll();
      <link rel="icon" sizes="192x192" href="img/logosinfondo.ico">
      <link rel="favicon" href="img/logosinfondo.ico">
      <link rel="apple-touch-icon" href=" img/logosinfondo.ico">
-     <!-- Fin codigo del Logo -->
+     <!-- Fin codigo del Log -->
 </head>
 <body>  
         <div class="head">
