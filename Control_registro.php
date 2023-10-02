@@ -2,7 +2,7 @@
 
 include_once 'conexion.php';
 
-$sentencia_select=$con->prepare('SELECT *FROM usuario ORDER BY id DESC');
+$sentencia_select=$PDO = new PDO('mysql:host=localhost;dbname=matematicas_djl', "root", "");
 $sentencia_select->execute();
 $resultado=$sentencia_select->fetchAll();
 
