@@ -15,7 +15,7 @@ $resultado=$sentencia_select->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de Registro</title>
-    <link rel="stylesheet" href="../matematicaDJL/Control-registro.css">
+    <link rel="stylesheet" href="../matematicaDJL/Control_registro.css">
      <!-- Logo -->
      <link rel="shortcut icon" href="img/logosinfondo.ico">
      <link rel="icon" sizes="192x192" href="img/logosinfondo.ico">
