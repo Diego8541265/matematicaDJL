@@ -30,8 +30,8 @@
 <body>
   <section class="form-register">
       <h4>Inicio de sesion</h4>
-      <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-      <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+      <input class="controls" type="email" name="Correo" id="correo" placeholder="Ingrese su Correo">
+      <input class="controls" type="password" name="Contrasena" id="contrasena" placeholder="Ingrese su Contraseña">
       <p><a href="registro.php">Crear cuenta</a></p>
    <a href="index.html">
       <input type="submit" value="iniciar sesión" class="button">
