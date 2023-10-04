@@ -4,8 +4,14 @@ body{
 }
 
 .head1 {
-    display: flex;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
     background: #3269ff;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 /* Borde azul */
 .head {
@@ -20,13 +26,13 @@ body{
 /* botones */
 .navbar {
     display: flex;
-	margin-left: 77%;
+	margin-left: 70%;
 }
 /* fin botones */
 
 
 .logo {
-    padding: 20px 20px;
+    padding: 10px;
 }
 
 .logo a {
@@ -38,7 +44,7 @@ body{
 
 .navbar a {
     display: block;
-    padding: 20px 20px;
+	margin-right: 10px;
     color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;

@@ -32,8 +32,8 @@
   <form action="loginuser.php" method="POST">
   <section class="form-register">
     <h4>Formulario Registro</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese sus Nombres">
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
     
 

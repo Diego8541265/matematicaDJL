@@ -30,7 +30,7 @@ $resultado=$sentencia_select->fetchAll();
         </div>
     
         <nav class="navbar">
-            <a href="Apartado_Guias.html">Inicio</a>
+            <a href="Apartado_Guias.html">Apartado Guias</a>
             <a href="inicio_sesion.html">Inicio de sesión</a>
         </nav>
         </div>
