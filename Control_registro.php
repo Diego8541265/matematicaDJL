@@ -62,7 +62,7 @@ $resultado=$sentencia_select->fetchAll();
         <td><?php echo $fila['Correo']; ?></td>
         <td><?php echo $fila['id_tipdoc']; ?></td>
         <td><?php echo $fila['numDoc']; ?></td>
-        <td><?php echo $fila['contrasena']; ?></td>
+        <td><?php echo $fila['Contrasena']; ?></td>
         <td><a href="update.php?id=<?php echo $resultado['id_usuario']; ?>" class="btn__update">Editar</a></td>
         <td><a href="delete.php?id=<?php echo $resultado['id_usuario']; ?>" class="btn__delete">Eliminar</a></td>
     </tr>
