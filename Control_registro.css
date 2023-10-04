@@ -156,16 +156,16 @@ form .btn{
 }
 
 
-/* table */
+/* tabla */
 table{
     width: 100%;
     border-collapse: collapse;
 }
 
-table .head{
+table .head2{
     background: rgb(3, 113, 163);
 }
-table .head td{
+table .head2 td{
     color: #fff;
     font-family: 'Arial',sans-serif;
     font-weight: bold;
@@ -183,7 +183,7 @@ table tr td{
 .btn__update{
     display: inline-block;
     font-size: 14px;
-    background: #1b743c;
+    background: #3de47a;
     color: #fff;
     border-radius: 5px;
     padding: 5px 10px;
@@ -192,7 +192,7 @@ table tr td{
 .btn__delete{
     display: inline-block;
     font-size: 14px;
-    background: #8a0505;
+    background: #f02323;
     color: #fff;
     border-radius: 5px;
     padding: 5px 10px;
