@@ -11,7 +11,7 @@ if(!empty($_POST['nombres']) && !empty($_POST['apellidos']) && !empty($_POST['co
     $pass = $_POST['contrasena'];
 
     $sql = "INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena) VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:pass)";
-    $stms = $PDO->prepare($sql);
+    $stms = $con->prepare($sql);
     $stms->bindParam(":nom",$name);
     $stms->bindParam(":apell",$apell);
     $stms->bindParam(":email",$email);
