@@ -12,7 +12,7 @@ if(!empty($_POST['nombres']) && !empty($_POST['apellidos']) && !empty($_POST['co
     // encriptado de la contraseña
     $hash = password_hash($pass, PASSWORD_DEFAULT, [50])
 
-    $sql = "INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena) VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:hash)";
+    $sql = "INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena) VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:$hash)";
     $stms = $con->prepare($sql);
     $stms->bindParam(":nom",$name);
     $stms->bindParam(":apell",$apell);
