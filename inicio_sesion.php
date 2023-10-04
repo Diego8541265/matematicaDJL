@@ -36,6 +36,6 @@
    <a href="index.html">
       <input type="submit" value="iniciar sesión" class="button">
     </a>
-    <?php include("login.php") ?>
+    <?php include("login.php")?>
 </body>
 </html>
