@@ -27,7 +27,7 @@ if ($counter==1){
 	
 
 } else {
-$error = "El correo electrónico o la contraseña es inválida.";	
+$error = "El correo electrónico o la contraseña es inválida.";
 }
 }
 }
