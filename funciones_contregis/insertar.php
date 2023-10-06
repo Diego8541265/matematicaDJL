@@ -16,8 +16,9 @@
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
       <div class="cont">
     <h2>Control de Registro de Usuarios</h2>
-    <form action="" method="post">
-        
+     <form action="" method="post">
+
+     </form>
      </div>
 </body>
 </html> 
