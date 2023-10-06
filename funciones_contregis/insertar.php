@@ -17,11 +17,18 @@
       <div class="contenedor2">
     <h2>Control de Registro de Usuarios</h2>
      <form action="" method="post">
-
-     <div>
-
+     <div class="form-group">
+     <input type="text" name="nombre"  placeholder="Nombres" class=input_text>
+     <input type="text" name="apellido"  placeholder="Apellidos" class=input_text>
      </div>
-
+     <div>
+     <input type="text" name="correo"  placeholder="Correo" class=input_text>
+     <input type="text" name="id_tipdoc"  placeholder="id_tipdoc" class=input_text>
+     </div>
+     <div>
+          <input type="text" name="numdoc"  placeholder="numDoc" class=input_text>
+          <input type="text" name="contraseña"  placeholder="Contraseña" class=input_text>
+     </div>
      </form>
      </div>
 </body>

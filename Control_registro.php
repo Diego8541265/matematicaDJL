@@ -51,7 +51,7 @@ $resultado=$sentencia_select->fetchAll();
         <td>Correo</td>
         <td>id_tipdoc</td>
         <td>numDoc</td>
-        <td>contraseña</td>
+        <td>Contraseña</td>
         <td colspan="2">Acción</td>
     </tr>
     <?php foreach($resultado as $fila):?>
