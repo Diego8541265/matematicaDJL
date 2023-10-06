@@ -1,5 +1,9 @@
 <?php
   include_once 'conexion.php';
+
+  if(isset($_POST)){
+
+  }
 ?>
 
 <!DOCTYPE html>
