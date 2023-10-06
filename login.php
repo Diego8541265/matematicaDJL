@@ -4,19 +4,12 @@ include("conexion.php");
 require_once("inicio_sesion.php");
 $error='';
 if (isset($_POST['Correo']) || isset($_POST['Contrasena'])) {
-	function validate($data)
+	function validate($data){
 	$data = trim($data);
 	$data = stripslashes($data);
 	$data = htmlspecialchars($data);
-	return $data;
-$error = "Username or Password is invalid";
-function validate($data){
-	$data = trim($data);
-	$data = stripslashes($data);
-	$data = htmlspecialchars($data);
-	return	$data
+	return  $data;
 }
-
 else
 {
 $correo = validate($_POST['Correo']);
@@ -29,7 +22,7 @@ if ($counter==1){
 		$_SESSION['login_user_sys']=$username;
 		header("location: index.html");
 	
-
+		
 } else {
 $error = "El correo electrónico o la contraseña es inválida.";
 }
