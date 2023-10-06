@@ -21,8 +21,6 @@
   <nav class="navbar">
       <a href="index.html">Inicio</a>
       <a href="inicio_sesion.html">Inicio de sesión</a>
-   
-  
   </nav>
 
 </div>
@@ -36,6 +34,17 @@
    <a href="index.html">
       <input type="submit" value="iniciar sesión" class="button">
     </a>
+    <?php
+    if (isset($_GET['error'])) {
+      ?>
+      <p class="error">
+      <?php 
+      echo $_GET['error']
+      ?>
+      </p>
+      <?php
+    }
+    ?>
     <?php include("login.php")?>
 </body>
 </html>
