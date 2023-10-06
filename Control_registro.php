@@ -35,7 +35,7 @@ $resultado=$sentencia_select->fetchAll();
         </nav>
         </div>
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
-<div class="cont">
+<div class="contenedor">
     <h2>Control de Registro de Usuarios</h2>
     <div class="barra__buscador">
         <form action="" class="formulario" method="post">
