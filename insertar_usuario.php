@@ -1,8 +1,14 @@
 <?php
   include_once 'conexion.php';
 
-  if(isset($_POST)){
-
+  if(isset($_POST['guardar'])){
+     $nombre=$_POST['nombre'];
+     $apellido=$_POST['apellido'];
+     $correo=$_POST['correo'];
+     $id_tipdoc=$_POST['id_tipdoc'];
+     $numdoc=$_POST['numdoc'];
+     $contraseña=$_POST['contraseña'];
+     
   }
 ?>
 
