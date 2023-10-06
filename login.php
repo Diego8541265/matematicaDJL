@@ -3,20 +3,24 @@ session_start();
 include("conexion.php");
 require_once("inicio_sesion.php");
 $error='';
-if (isset($_POST['submit'])) {
-if (empty($_POST['Correo']) || empty($_POST['Contrasena'])) {
+if (isset($_POST['Correo']) || isset($_POST['Contrasena'])) {
 	function validate($data)
 	$data = trim($data);
 	$data = stripslashes($data);
 	$data = htmlspecialchars($data);
 	return $data;
 $error = "Username or Password is invalid";
+function validate($data){
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return	$data
 }
+
 else
 {
-$username=$_POST['Correo'];
-$password=$_POST['Contrasena'];
-
+$correo = validate($_POST['Correo']);
+$contrasena = validate($_POST['Correo']);
 
 $sql = "SELECT * FROM usuario WHERE Correo = '" . $username . "' and Contrasena = '".$password."';";
 $query=mysqli_query($con,$sql);
