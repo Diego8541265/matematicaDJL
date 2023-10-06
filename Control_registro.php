@@ -1,3 +1,13 @@
+<?php
+
+include_once 'conexion.php';
+
+$sentencia_select=$con->prepare('SELECT *FROM usuario');
+$sentencia_select->execute();
+$resultado=$sentencia_select->fetchAll();
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,13 +15,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de Registro</title>
-    <link rel="stylesheet" href="../matematicaDJL/Control-registro.css">
+    <link rel="stylesheet" href="../matematicaDJL/Control_registro.css">
      <!-- Logo -->
      <link rel="shortcut icon" href="img/logosinfondo.ico">
      <link rel="icon" sizes="192x192" href="img/logosinfondo.ico">
      <link rel="favicon" href="img/logosinfondo.ico">
      <link rel="apple-touch-icon" href=" img/logosinfondo.ico">
-     <!-- Fin codigo del Logo -->
+     <!-- Fin codigo del Log -->
 </head>
 <body>  
         <div class="head">
@@ -20,7 +30,7 @@
         </div>
     
         <nav class="navbar">
-            <a href="Apartado_Guias.html">Inicio</a>
+            <a href="Apartado_Guias.html">Apartado Guias</a>
             <a href="inicio_sesion.html">Inicio de sesión</a>
         </nav>
         </div>
@@ -44,8 +54,21 @@
         <td>contraseña</td>
         <td colspan="2">Acción</td>
     </tr>
-    
+    <?php foreach($resultado as $fila):?>
+    <tr>
+        <td><?php echo $fila['id_usuario']; ?></td>
+        <td><?php echo $fila['Nombres']; ?></td>
+        <td><?php echo $fila['Apellidos']; ?></td>
+        <td><?php echo $fila['Correo']; ?></td>
+        <td><?php echo $fila['id_tipdoc']; ?></td>
+        <td><?php echo $fila['numDoc']; ?></td>
+        <td><?php echo $fila['Contrasena']; ?></td>
+        <td><a href="update.php?id=<?php echo $fila['id_usuario']; ?>" class="btn__update">Editar</a></td>
+        <td><a href="delete.php?id=<?php echo $fila['id_usuario']; ?>" class="btn__delete">Eliminar</a></td>
+    </tr>
+  <?php endforeach ?>
+
 </table>
 </div>
 </body>
-</html>
+</html> 

@@ -1,3 +1,3 @@
 <?php
-$PDO = new PDO('mysql:host=localhost;dbname=matematicas_djl', "root", "");
+$con = new PDO('mysql:host=localhost;dbname=matematicas_djl', "root", "");
 ?>

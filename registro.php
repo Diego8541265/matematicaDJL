@@ -22,7 +22,7 @@
 
 <nav class="navbar">
     <a href="index.html">Inicio</a>
-    <a href="inicio_sesion.html">Inicio de sesión</a>
+    <a href="inicio_sesion.php">Inicio de sesión</a>
  
 
 </nav>
@@ -32,8 +32,8 @@
   <form action="loginuser.php" method="POST">
   <section class="form-register">
     <h4>Formulario Registro</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese sus Nombres">
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
     <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
     
 
@@ -48,7 +48,7 @@
     <input class="controls" type="" name="numDoc" id="correo" placeholder="numero de documento">
     <input class="controls" type="password" name="contrasena" id="correo" placeholder="Ingrese su Contraseña">
     <input type="submit" value="registrarse" class="button">
-    <p><a href="inicio_sesion.html">Iniciar Sesión</a></p>
+    <p><a href="inicio_sesion.php">Iniciar Sesión</a></p>
     <?php include("loginuser.php") ?>
     </section>
 </form>
