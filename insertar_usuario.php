@@ -2,13 +2,16 @@
   include_once 'conexion.php';
 
   if(isset($_POST['guardar'])){
-     $nombre=$_POST['nombre'];
-     $apellido=$_POST['apellido'];
+     $nombres=$_POST['nombres'];
+     $apellidos=$_POST['apellidos'];
      $correo=$_POST['correo'];
      $id_tipdoc=$_POST['id_tipdoc'];
      $numdoc=$_POST['numdoc'];
      $contraseña=$_POST['contraseña'];
      
+     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)){
+          
+     }
   }
 ?>
 
@@ -32,8 +35,8 @@
     <h2>Control de Registro de Usuarios</h2>
      <form action="" method="post">
      <div class="form-group">
-     <input type="text" name="nombre"  placeholder="Nombres" class="input_text">
-     <input type="text" name="apellido"  placeholder="Apellidos" class=input_text>
+     <input type="text" name="nombres"  placeholder="Nombres" class="input_text">
+     <input type="text" name="apellidos"  placeholder="Apellidos" class=input_text>
      </div>
      <div class="form-group">
      <input type="text" name="correo"  placeholder="Correo" class="input_text">
