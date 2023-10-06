@@ -14,9 +14,13 @@
 </head>
 <body>  
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
-      <div class="cont">
+      <div class="contenedor2">
     <h2>Control de Registro de Usuarios</h2>
      <form action="" method="post">
+
+     <div>
+
+     </div>
 
      </form>
      </div>
