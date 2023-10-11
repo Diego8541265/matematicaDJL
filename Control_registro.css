@@ -146,7 +146,7 @@ form .btn{
 }
 .btn__nuevo{
     float: right;
-    background: #1b743c !important;
+    background: #45ff89 !important;
 }
 
 .btn__group{
@@ -170,7 +170,7 @@ table{
 }
 
 table .head2{
-    background: rgb(3, 113, 163);
+    background: rgb(15, 176, 250);
 }
 table .head2 td{
     color: #fff;
