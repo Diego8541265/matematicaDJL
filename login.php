@@ -13,7 +13,6 @@ if (isset($_POST['Correo']) || isset($_POST['Contrasena'])) {
 }
 $Correo = validate($_POST['Correo']);
 $Contrasena = validate($_POST['Contrasena']);
-
     if (empty($Correo)){
         header("location: inicio_sesion.php?error=El Correo Es Requerido");
         exit();
@@ -21,7 +20,6 @@ $Contrasena = validate($_POST['Contrasena']);
         header("location: inicio_sesion.php?error=La Contraseña Es Requerido");
         exit();
     }else{
-
         $sql = "SELECT * FROM usuario WHERE Correo = '" . $Correo . "' and Contrasena = '" . $Contrasena . "';";
         $query=mysqli_query($con,$sql);
         if(mysqli_now_rows($query) === 1){
@@ -50,6 +48,6 @@ if ($counter==1){
     header("location: index.html");
 
 }else{
-$error = "El correo electrónico o la contraseña es inválida.";
+$error = "El Correo Electrónico O La Contraseña Es Inválida.";
 }
 ?>
