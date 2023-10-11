@@ -14,7 +14,7 @@
           echo "<script> alert('Correo no valdo');</script>";
          }else{
              $consulta_insert=$con->prepare('INSERT INTO usuario(nombres,apellidos,correo,id_tipdoc,numdoc,contraseña)
-             VALUES(:nombre,:apellidos,:correo,:id_tipdoc,:numdoc,:contraseña)')
+             VALUES(:nombre,:apellidos,:correo,:id_tipdoc,:numdoc,:contraseña)');
              $consulta_insert->execute(array(
                ':nombres'=>$nombres,
                ':apellidos'=>$apellidos,
