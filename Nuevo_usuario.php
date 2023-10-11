@@ -10,14 +10,19 @@
      $contraseña=$_POST['contraseña'];
      
      if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($id_tipdoc)&& !empty($numdoc)&& !empty($contraseña) ){
-          
+         if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
+          echo "<script> alert('Correo no valdo');</script>";
+         }else{
+             $consulta_insert=$con->prepare('INSERT INTO usuario(nombres,apellidos,correo,id_tipdoc,numdoc,contraseña)
+             VALUES(:nombre,:apellidos,:correo,:id_tipdoc,:numdoc,:contraseña)');
+         }    
      }else{
          echo "<script> alert('Los campos estan vacios');</script>";
       }
   }
 
 
-  
+
 ?>
 
 <!DOCTYPE html>
