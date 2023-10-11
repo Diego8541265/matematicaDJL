@@ -2,14 +2,16 @@
   include_once 'conexion.php';
 
   if(isset($_POST['guardar'])){
-     $nombres=$_POST['nombres'];
-     $apellidos=$_POST['apellidos'];
-     $correo=$_POST['correo'];
-     $id_tipdoc=$_POST['id_tipdoc'];
-     $numdoc=$_POST['numdoc'];
-     $contraseña=$_POST['contraseña'];
+     $name = $_POST['nombres'];
+     $apell = $_POST['apellidos'];
+     $email = $_POST['correo'];
+     $tipDoc = $_POST['tipDoc'];
+     $numDoc = $_POST['numDoc'];
+     $pass = $_POST['contrasena'];
+     $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
+ 
      
-     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($id_tipdoc)&& !empty($numdoc)&& !empty($contraseña) ){
+     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($tipDoc)&& !empty($numDoc)&& !empty($pass) ){
          if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
           echo "<script> alert('Correo no valdo');</script>";
          }else{
@@ -50,7 +52,7 @@
 </head>
 <body>  
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
-      <div class="contenedor2">
+     <div class="contenedor2">
     <h2>Control de Registro de Usuarios</h2>
      <form action="" method="post">
      <div class="form-group">
