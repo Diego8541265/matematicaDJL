@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("conexion.php");
-require_once("inicio_sesion.php");
+require_once("ini_ses.php");
 $error='';
 if (isset($_POST['Correo']) || isset($_POST['Contrasena'])) {
 
