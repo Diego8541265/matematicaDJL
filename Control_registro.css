@@ -2,15 +2,6 @@
     margin: 0;
     padding: 0;
   }
-  body {
-      background-image: url(img/fondo.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-  }
-  body {
-      text-align: center;
-      font-family: sans-serif;
-  }
   .head {
       display: flex;
       align-items: center;
@@ -55,7 +46,9 @@
   body{
     font-family: 'Arial',sans-serif;
     font-size: 16px;
-    background: #f2f2f2;
+    background-image: url(img/fondo.png);
+      background-size: cover;
+      background-repeat: no-repeat;
 }
 
 a{
@@ -70,8 +63,8 @@ a{
 }
 .contenedor2{
     width: 100%;
-    max-width: 850px;
-    margin: 20px auto;
+    max-width: 100px;
+    margin: 100px auto;
     overflow: hidden;
 
 }
@@ -89,7 +82,7 @@ h2{
 
 .barra__buscador{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 150px;
     margin-bottom: 10px;
 }
 
@@ -120,13 +113,13 @@ form .input__text:focus{
 }
 form .form-group{
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
 form .form-group .input__text{
-    max-width: 45% !important;
+    max-width: 10% !important;
 }
 
 
@@ -167,6 +160,7 @@ form .btn{
 table{
     width: 100%;
     border-collapse: collapse;
+    background: #ffffff;
 }
 
 table .head2{
