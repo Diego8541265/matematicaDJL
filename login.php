@@ -47,7 +47,6 @@ elseif (empty($Contrasena)) {
 }
 
 
-
 	if ($counter==1){
 			$_SESSION['login_user_sys']=$Correo;
 			header("location: index.html");
