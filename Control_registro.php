@@ -41,6 +41,7 @@ $resultado=$sentencia_select->fetchAll();
         <form action="" class="formulario" method="post">
            <input type="text" name="buscar" placeholder="buscar nombre o apellidos" class="input__text">
            <input type="submit" class="btn" name="btn_buscar" value="Buscar">
+           <a href="Nuevo_usuario.php" class="btn btn__nuevo">Nuevo</a>
         </form>
     </div>
     <table>

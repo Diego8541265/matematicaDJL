@@ -9,9 +9,11 @@
      $numdoc=$_POST['numdoc'];
      $contraseña=$_POST['contraseña'];
      
-     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)){
+     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($id_tipdoc)&& !empty($numdoc)&& !empty($contraseña) ){
           
-     }
+     }else{
+
+      }
   }
 ?>
 
