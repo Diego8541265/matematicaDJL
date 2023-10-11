@@ -116,11 +116,11 @@ form .form-group{
     width: 80%;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: auto;
+
 }
 
 form .form-group .input__text{
-    max-width: 10% !important;
+    max-width: 95%!important;
 }
 
 
