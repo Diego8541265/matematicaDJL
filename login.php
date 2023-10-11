@@ -38,6 +38,7 @@ $Contrasena = validate($_POST['Contrasena']);
             exit();
         }
     }
+
 }else{
 	header("location: ");
 	exit();
@@ -46,7 +47,6 @@ $Contrasena = validate($_POST['Contrasena']);
 if ($counter==1){
     $_SESSION['login_user_sys']=$Correo;
     header("location: index.html");
-
 }else{
 $error = "El Correo Electrónico O La Contraseña Es Inválida.";
 }
