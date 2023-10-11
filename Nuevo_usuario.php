@@ -14,7 +14,16 @@
           echo "<script> alert('Correo no valdo');</script>";
          }else{
              $consulta_insert=$con->prepare('INSERT INTO usuario(nombres,apellidos,correo,id_tipdoc,numdoc,contraseña)
-             VALUES(:nombre,:apellidos,:correo,:id_tipdoc,:numdoc,:contraseña)');
+             VALUES(:nombre,:apellidos,:correo,:id_tipdoc,:numdoc,:contraseña)')
+             $consulta_insert->execute(array(
+               ':nombres'=>$nombres,
+               ':apellidos'=>$apellidos,
+               ':correo'=>$correo,
+               ':id_tipdoc'=>$id_tipdoc,
+               ':numdoc'=>$numdoc,
+               ':contraseña'=>$contraseña,
+             ));
+             header('Location: Control_registro.php');
          }    
      }else{
          echo "<script> alert('Los campos estan vacios');</script>";
