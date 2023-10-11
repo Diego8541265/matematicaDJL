@@ -20,7 +20,7 @@
 
   <nav class="navbar">
       <a href="index.html">Inicio</a>
-      <a href="inicio_de_sesion.php">Inicio de sesión</a>
+      <a href="inicio_sesion.php">Inicio de sesión</a>
   </nav>
 
 </div>
@@ -45,6 +45,6 @@
       <?php
     }
     ?>
-    
+    <?php include("login.php")?>
 </body>
-</html>    
+</html>
