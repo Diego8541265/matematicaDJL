@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("conexion.php");
-require_once("ini_ses.php");
+require_once("inicio_de_sesion.php");
 $error='';
 if (isset($_POST['Correo']) || isset($_POST['Contrasena'])) {
 
@@ -15,11 +15,11 @@ $Correo = validate($_POST['Correo']);
 $Contrasena = validate($_POST['Contrasena']);
 
 if (empty($Correo)){
-	header("location: ini_ses.php?error=El Correo Es Requerido");
+	header("location: inicio_de_sesion.php?error=El Correo Es Requerido");
 	exit();
 }
 elseif (empty($Contrasena)) {
-	header("location: ini_ses.php?error=La Contraseña Es Requerido");
+	header("location: inicio_de_sesion.php?error=La Contraseña Es Requerido");
 	exit();
 }else{
 
@@ -33,18 +33,19 @@ elseif (empty($Contrasena)) {
 			header("location: index.html");
 			exit();
 	}else {
-		header("location: ini_ses.php?error=El Correo O Contraseña Son Es Incorrectos");
+		header("location: inicio_de_sesion.php?error=El Correo O Contraseña Son Es Incorrectos");
 		exit();
 	}
 	}else {
-		header("location: ini_ses.php?error=El Correo O Contraseña Son Es Incorrectos");
+		header("location: inicio_de_sesion.php?error=El Correo O Contraseña Son Es Incorrectos");
 		exit();
 	}
 }
 }else {
-	header("location: ini_ses.php");
+	header("location: inicio_de_sesion.php");
 	exit();
 }
+
 
 
 	if ($counter==1){
