@@ -15,11 +15,11 @@ $Correo = validate($_POST['Correo']);
 $Contrasena = validate($_POST['Contrasena']);
 
 if (empty($Correo)){
-	header("location: inicio_sesion.php?error=El Correo Es Requerido");
+	header("location: ini_ses.php?error=El Correo Es Requerido");
 	exit();
 }
 elseif (empty($Contrasena)) {
-	header("location: inicio_sesion.php?error=La Contraseña Es Requerido");
+	header("location: ini_ses.php?error=La Contraseña Es Requerido");
 	exit();
 }else{
 
@@ -33,19 +33,18 @@ elseif (empty($Contrasena)) {
 			header("location: index.html");
 			exit();
 	}else {
-		header("location: inicio_sesion.php?error=El Correo O Contraseña Son Es Incorrectos");
+		header("location: ini_ses.php?error=El Correo O Contraseña Son Es Incorrectos");
 		exit();
 	}
 	}else {
-		header("location: inicio_sesion.php?error=El Correo O Contraseña Son Es Incorrectos");
+		header("location: ini_ses.php?error=El Correo O Contraseña Son Es Incorrectos");
 		exit();
 	}
 }
 }else {
-	header("location: inicio_sesion.php");
+	header("location: ini_ses.php");
 	exit();
 }
-
 
 
 	if ($counter==1){
