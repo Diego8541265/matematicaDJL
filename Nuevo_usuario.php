@@ -12,9 +12,11 @@
      if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($id_tipdoc)&& !empty($numdoc)&& !empty($contraseña) ){
           
      }else{
-
+         echo "<script> alert('Los campos estan vacios');</script>";
       }
   }
+
+  
 ?>
 
 <!DOCTYPE html>
