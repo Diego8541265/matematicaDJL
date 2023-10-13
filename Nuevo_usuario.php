@@ -5,7 +5,7 @@
      $name = $_POST['nombres'];
      $apell = $_POST['apellidos'];
      $email = $_POST['correo'];
-     $tipDoc = $_POST['id_tipdoc'];
+     $tipDoc = $_POST['tipdoc'];
      $numDoc = $_POST['numdoc'];
      $pass = $_POST['contraseña'];
      $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
