@@ -21,9 +21,9 @@
                ':nombres'=>$nombres,
                ':apellidos'=>$apellidos,
                ':correo'=>$correo,
-               ':tipdoc'=>$tipDoc,
-               ':numdoc'=>$numDoc,
-               ':contrasena'=>$hash,
+               ':tipdoc'=>$tipdoc,
+               ':numdoc'=>$numdoc,
+               ':contrasena'=>$pass,
              ));
              header('Location: Control_registro.php');
          }    
