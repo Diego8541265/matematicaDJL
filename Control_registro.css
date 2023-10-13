@@ -46,7 +46,7 @@
   body{
     font-family: 'Arial',sans-serif;
     font-size: 16px;
-    background-image: url(img/fondo.pg);
+    background-image: url(img/fondo.png);
       background-size: cover;
       background-repeat: no-repeat;
 }
