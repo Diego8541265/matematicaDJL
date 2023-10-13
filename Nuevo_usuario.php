@@ -15,15 +15,15 @@
          if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
           echo "<script> alert('Correo no valdo');</script>";
          }else{
-             $consulta_insert=$con->prepare('INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena)
-             VALUES(:nombres,:apellidos,:correo,:tipdoc,:numdoc,:contrasena)');
+             $consulta_insert=$con->prepare("INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena)
+             VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:pass)");
              $consulta_insert->execute(array(
-               ':nombres'=>$nombres,
-               ':apellidos'=>$apellidos,
-               ':correo'=>$correo,
-               ':tipdoc'=>$tipdoc,
-               ':numdoc'=>$numdoc,
-               ':contrasena'=>$pass,
+               ':nom'=>$name,
+               ':apell'=>$apell,
+               ':email'=>$email,
+               ':tipdoc'=>$tipDoc,
+               ':numdoc'=>$numDoc,
+               ':pass'=>$hash,
              ));
              header('Location: Control_registro.php');
          }    
