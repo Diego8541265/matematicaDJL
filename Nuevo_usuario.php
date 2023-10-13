@@ -11,7 +11,7 @@
      $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
  
      
-     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($tipDoc)&& !empty($numDoc)&& !empty($contrasena) ){
+     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($tipdoc)&& !empty($numdoc)&& !empty($contraseña) ){
          if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
           echo "<script> alert('Correo no valdo');</script>";
          }else{
