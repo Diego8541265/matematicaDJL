@@ -5,8 +5,8 @@
      $name = $_POST['nombres'];
      $apell = $_POST['apellidos'];
      $email = $_POST['correo'];
-     $tipDoc = $_POST['tipdoc'];
-     $numDoc = $_POST['numdoc'];
+     $tipDoc = $_POST['tipDoc'];
+     $numDoc = $_POST['numDoc'];
      $pass = $_POST['contrasena'];
      $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
  
@@ -15,7 +15,7 @@
          if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
           echo "<script> alert('Correo no valdo');</script>";
          }else{
-             $consulta_insert=$con->prepare('INSERT INTO usuario(Nombres,Apellidos,Correo,tipDoc,numDoc,Contraseña)
+             $consulta_insert=$con->prepare('INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena)
              VALUES(:nombre,:apellidos,:correo,:tipdoc,:numdoc,:contrasena)');
              $consulta_insert->execute(array(
                ':nombres'=>$nombres,
