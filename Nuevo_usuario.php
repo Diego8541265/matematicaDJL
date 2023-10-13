@@ -5,9 +5,9 @@
      $name = $_POST['nombres'];
      $apell = $_POST['apellidos'];
      $email = $_POST['correo'];
-     $tipDoc = $_POST['tipDoc'];
-     $numDoc = $_POST['numDoc'];
-     $pass = $_POST['contrasena'];
+     $tipDoc = $_POST['id_tipdoc'];
+     $numDoc = $_POST['numdoc'];
+     $pass = $_POST['contraseña'];
      $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
  
      
@@ -61,7 +61,7 @@
      </div>
      <div class="form-group">
      <input type="text" name="correo"  placeholder="Correo" class="input_text">
-     <input type="text" name="id_tipdoc"  placeholder="id_tipdoc" class="input_text">
+     <input type="text" name="tipdoc"  placeholder="tipdoc" class="input_text">
      </div>
      <div class="form-group">
           <input type="text" name="numdoc"  placeholder="numDoc" class="input_text">
