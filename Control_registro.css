@@ -116,6 +116,7 @@ form .form-group{
     width: 80%;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin: 10%;
 
 }
 
