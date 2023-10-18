@@ -1,53 +1,31 @@
 <?php
-session_start();
-include("conexion.php");
-require_once("inicio_sesion.php");
-$error='';
-if (isset($_POST['Correo']) || isset($_POST['Contrasena'])) {
 
-	function validate($data){
-	$data = trim($data);
-	$data = stripslashes($data);
-	$data = htmlspecialchars($data);
-	return  $data;
+//include("conexion.php");
+
+$mysqli = new mysqli("localhost", "root", "", "matematicas_djl");
+
+if ($mysqli->connect_errno) {
+    die("error de conexión: " . $mysqli->connect_error);
 }
-$Correo = validate($_POST['Correo']);
-$Contrasena = validate($_POST['Contrasena']);
-    if (empty($Correo)){
-        header("location: inicio_sesion.php?error=El Correo Es Requerido");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $Correo= $_POST["Correo"];
+    $Contrasena = $_POST["Contrasena"];
+ 
+    $query = "SELECT * FROM usuario WHERE Correo = '$Correo' AND Contrasena = '$Contrasena'";
+    //$result = $mysqli->query($sql);
+    $result = mysqli_query($mysqli,$query);
+
+    if ($result->num_rows == 1) {
+        $_SESSION['Correo'] = $Correo;
+        header("Apartado_guias.html");
+        //echo "holaaaaa";
         exit();
-    }elseif (empty($Contrasena)) {
-        header("location: inicio_sesion.php?error=La Contraseña Es Requerido");
-        exit();
-    }else{
-        $sql = "SELECT * FROM usuario WHERE Correo = '" . $Correo . "' and Contrasena = '" . $Contrasena . "';";
-        $query=mysqli_query($con,$sql);
-        if(mysqli_now_rows($query) === 1){
-            $row = mysqli_fetch_assoc($query);
-            if ($row['Correo'] === $Correo && $row['Contrasena'] === $Contrasena) {
-                $_SESSION['Nombres'] = $row['Nombres'];
-                $_SESSION['id_usuario'] = $row['id_usuario'];
-                header("location: Apartado_Guias.html");
-                exit();
-            }else{
-                header("location: inicio_sesion.php?error=El Correo O Contraseña Son Es Incorrectos");
-                exit();
-            }
-        }else{
-            header("location: inicio_sesion.php?error=El Correo O Contraseña Son Es Incorrectos");
-            exit();
-        }
+    } else {
+        //echo "Nombre o usuario incorrecto. Inténtelo de nuevo.";
+        header("inicio_sesion.php");
     }
-
-}else{
-	header("location: ");
-	exit();
 }
 
-if ($counter==1){
-    $_SESSION['login_user_sys']=$Correo;
-    header("location: Apartado_Guias.htmll");
-}else{
-$error = "El Correo Electrónico O La Contraseña Es Inválida.";
-}
+$mysqli->close();
 ?>
