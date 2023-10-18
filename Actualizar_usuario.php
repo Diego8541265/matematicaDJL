@@ -1,5 +1,17 @@
 <?php
 include_once 'conexion.php';
+
+if(isset($_GET['id'])){
+    $id=(int) $_GET['id'];
+    
+    $buscar_id=$con->prepare('SELECT * FROM usuario WHERE id_usuario=:id');
+    $buscar_id->execute(array(
+        ':id'=>$id
+    ));
+    $resultado=$buscar_id->fetch();
+}else{
+    header('Location: Control_registro.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +33,8 @@ include_once 'conexion.php';
     <h2>Control de Registro de Usuarios</h2>
      <form action="nuevo_usuario_controlador.php" method="post">
      <div class="form-group">
-     <input type="text" name="nombres"  placeholder="Nombres" class="input_text">
-     <input type="text" name="apellidos"  placeholder="Apellidos" class=input_text>
+     <input type="text" name="nombres"  value="<?php if($resultado) echo $resultado['nombres']; ?>" class="input_text">
+     <input type="text" name="apellidos"  placeholder="Apellidos" class="input_text">
      </div>
      <div class="form-group">
      <input type="text" name="correo"  placeholder="Correo" class="input_text">
