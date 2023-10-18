@@ -1,20 +1,18 @@
 <?php
 
-include("conexion.php");
+//include("conexion.php");
 
-$mysqli = new mysqli($host, $user, $pw, $db);
+$mysqli = new mysqli("localhost", "root", "", "matematicas_djl");
 
-
-if ($mysqli->connect_error) {
-    die("Conexión fallida: " . $mysqli->connect_error);
+if ($mysqli->connect_errno) {
+    die("error de conexión: " . $mysqli->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Correo= $_POST["Correo"];
     $Contrasena = $_POST["Contrasena"];
-
  
-    $query = "SELECT * FROM usuario WHERE nom_usuario = '$Correo' AND Contrasena = '$Contrasena'";
+    $query = "SELECT * FROM usuario WHERE Correo = '$Correo' AND Contrasena = '$Contrasena'";
     //$result = $mysqli->query($sql);
     $result = mysqli_query($mysqli,$query);
 
@@ -28,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("inicio_sesion.php");
     }
 }
-
 
 $mysqli->close();
 ?>
