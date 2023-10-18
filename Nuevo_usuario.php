@@ -5,25 +5,25 @@
      $name = $_POST['nombres'];
      $apell = $_POST['apellidos'];
      $email = $_POST['correo'];
-     $tipDoc = $_POST['tipDoc'];
-     $numDoc = $_POST['numDoc'];
-     $pass = $_POST['contrasena'];
+     $tipDoc = $_POST['tipdoc'];
+     $numDoc = $_POST['numdoc'];
+     $pass = $_POST['contraseña'];
      $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
  
      
-     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($tipDoc)&& !empty($numDoc)&& !empty($pass) ){
+     if(!empty($nombres)&& !empty($apellidos) && !empty($correo)&& !empty($tipdoc)&& !empty($numdoc)&& !empty($contraseña) ){
          if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){
           echo "<script> alert('Correo no valdo');</script>";
          }else{
-             $consulta_insert=$con->prepare('INSERT INTO usuario(nombres,apellidos,correo,tipDoc,numDoc,contrasena)
-             VALUES(:nombre,:apellidos,:correo,:id_tipdoc,:numdoc,:contraseña)');
+             $consulta_insert=$con->prepare("INSERT INTO usuario(Nombres,Apellidos,Correo,id_tipdoc,numDoc,Contrasena)
+             VALUES(:nom,:apell,:email,:tipdoc,:numdoc,:pass)");
              $consulta_insert->execute(array(
-               ':nombres'=>$nombres,
-               ':apellidos'=>$apellidos,
-               ':correo'=>$correo,
-               ':id_tipdoc'=>$id_tipdoc,
-               ':numdoc'=>$numdoc,
-               ':contraseña'=>$contraseña,
+               ':nom'=>$name,
+               ':apell'=>$apell,
+               ':email'=>$email,
+               ':tipdoc'=>$tipDoc,
+               ':numdoc'=>$numDoc,
+               ':pass'=>$hash,
              ));
              header('Location: Control_registro.php');
          }    
@@ -61,7 +61,7 @@
      </div>
      <div class="form-group">
      <input type="text" name="correo"  placeholder="Correo" class="input_text">
-     <input type="text" name="id_tipdoc"  placeholder="id_tipdoc" class="input_text">
+     <input type="text" name="tipdoc"  placeholder="tipdoc" class="input_text">
      </div>
      <div class="form-group">
           <input type="text" name="numdoc"  placeholder="numDoc" class="input_text">

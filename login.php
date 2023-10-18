@@ -27,7 +27,7 @@ $Contrasena = validate($_POST['Contrasena']);
             if ($row['Correo'] === $Correo && $row['Contrasena'] === $Contrasena) {
                 $_SESSION['Nombres'] = $row['Nombres'];
                 $_SESSION['id_usuario'] = $row['id_usuario'];
-                header("location: index.html");
+                header("location: Apartado_Guias.html");
                 exit();
             }else{
                 header("location: inicio_sesion.php?error=El Correo O Contraseña Son Es Incorrectos");
@@ -46,7 +46,7 @@ $Contrasena = validate($_POST['Contrasena']);
 
 if ($counter==1){
     $_SESSION['login_user_sys']=$Correo;
-    header("location: index.html");
+    header("location: Apartado_Guias.htmll");
 }else{
 $error = "El Correo Electrónico O La Contraseña Es Inválida.";
 }

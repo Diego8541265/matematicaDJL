@@ -31,7 +31,7 @@
       <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
       <input class="controls" type="password" name="Contrasena" id="Contrasena" placeholder="Ingrese su Contraseña">
       <p><a href="registro.php">Crear cuenta</a></p>
-   <a href="index.html">
+   <a>
       <input type="submit" value="iniciar sesión" class="button">
     </a>
     <?php
