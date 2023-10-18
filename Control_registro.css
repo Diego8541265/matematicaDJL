@@ -64,9 +64,10 @@ a{
 .contenedor2{
     width: 100%;
     max-width: 1000px;
-    margin: 100px auto;
+    margin: 189px auto;
     overflow: hidden;
-
+    background: #ffffff;
+border-radius: 90px;
 }
 
 h2{
@@ -92,24 +93,23 @@ h2{
     overflow: hidden;
 }
 
-form .input__text{
+.input_text{
     width: 100%;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 1px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     color: #848688;
     display: block;
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 15px;
-    padding: 10px 15px;
     max-width: 30%;
     margin-right: 10px;
     outline: medium none;
-}
+}       
 
 
-form .input__text:focus{
-    border: 1px solid #1b743c;
+form .input_text:focus{
+    border: 1px solid #0a0a0a;
 }
 form .form-group{
     display: flex;
@@ -120,8 +120,8 @@ form .form-group{
 
 }
 
-form .form-group .input__text{
-    max-width: 45%!important;
+form .form-group .input_text{
+    max-width: 30%!important;
 }
 
 
