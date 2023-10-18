@@ -66,8 +66,9 @@ a{
     max-width: 1000px;
     margin: 189px auto;
     overflow: hidden;
-    background: #ffffff;
-border-radius: 90px;
+    background: #25a8ff;
+    border-radius: 90px;
+    box-shadow: 9px 8px 20px #3269ff8f;
 }
 
 h2{
@@ -78,7 +79,7 @@ h2{
     font-size: 30px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    color: #555;
+    color: #ffffff;
 }
 
 .barra__buscador{
@@ -96,17 +97,32 @@ h2{
 .input_text{
     width: 100%;
     border: 1px solid #ccc;
-    border-radius: 1px;
+    border-radius: px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     color: #848688;
     display: block;
     font-size: 20px;
     margin-bottom: 15px;
     max-width: 30%;
-    margin-right: 10px;
+    margin-right: 60px;
     outline: medium none;
+    padding: 10px 15px;
 }       
 
+form .input__text{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #848688;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    max-width: 30%;
+    margin-right: 10px;
+    outline: medium none;
+}
 
 form .input_text:focus{
     border: 1px solid #0a0a0a;
@@ -121,7 +137,7 @@ form .form-group{
 }
 
 form .form-group .input_text{
-    max-width: 30%!important;
+    max-width: 45%!important;
 }
 
 
@@ -155,7 +171,7 @@ form .btn{
     background: rgb(3, 113, 163);
 }
 .btn__danger{
-    background: #8a0505 !important;
+    background: #f02323 !important;
 }
 
 
