@@ -28,13 +28,13 @@
 <body>
 <section class="form-register">
       <h4>Inicio de sesion</h4>
-      <p><a href="registro.php">Crear cuenta</a></p>
                     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" class="text-center">
                             <div>
                             <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
                             <input class="controls" type="password" name="Contrasena" id="Contrasena" placeholder="Ingrese su Contraseña">
                             <input type="submit" value="iniciar sesión" class="button">
                             </div>
+                        <p><a href="registro.php">Crear cuenta</a></p>
                         </form>
 
     </body>

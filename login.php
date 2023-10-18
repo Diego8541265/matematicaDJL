@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows == 1) {
         $_SESSION['Correo'] = $Correo;
-        header("apartado_guias.html");
+        header("Apartado_guias.html");
         //echo "holaaaaa";
         exit();
     } else {
