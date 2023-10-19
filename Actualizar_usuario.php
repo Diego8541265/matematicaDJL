@@ -12,6 +12,49 @@ if(isset($_GET['id'])){
 }else{
     header('Location: Control_registro.php');
 }
+
+
+    if(isset($_POST['guardar'])){
+        $name = $_POST['nombres'];
+        $apell = $_POST['apellidos'];
+        $email = $_POST['correo'];
+        $tipDoc = $_POST['tipdoc'];
+        $numDoc = $_POST['numdoc'];
+        $pass = $_POST['contraseña'];
+        $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
+    
+        
+        if(!empty($name)&& !empty($apell) && !empty($email)&& !empty($tipDoc)&& !empty($numDoc)&& !empty($pass) ){
+            if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+             echo "<script> alert('Correo no valdo');</script>";
+            }else{
+                $consulta_update=$con->prepare("UPDATE usuario SET 
+                Nombres=:nombres,
+                Apellidos=:apellidos,
+                Correo=:correo,
+                id_tipdoc=:id_tipdoc,
+                numDoc=:numdoc,
+                Contrasena=:contraseña
+                WHERE id=:id
+                ");
+                
+
+                $consulta_update->execute(array(
+                  ':nom'=>$name,
+                  ':apell'=>$apell,
+                  ':email'=>$email,
+                  ':tipdoc'=>$tipDoc,
+                  ':numdoc'=>$numDoc,
+                  ':pass'=>$hash,
+                  ':id' =>$id
+                ));
+                header('Location: Control_registro.php');
+            }    
+        }else{
+            echo "<script> alert('Los campos estan vacios');</script>";
+         }
+     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,15 +77,15 @@ if(isset($_GET['id'])){
      <form action="nuevo_usuario_controlador.php" method="post">
      <div class="form-group">
      <input type="text" name="nombres"  value="<?php if($resultado) echo $resultado['Nombres']; ?>" class="input_text">
-     <input type="text" name="apellidos"  placeholder="Apellidos" class="input_text">
+     <input type="text" name="apellidos"  value="<?php if($resultado) echo $resultado['Apellidos']; ?>" class="input_text">
      </div>
      <div class="form-group">
-     <input type="text" name="correo"  placeholder="Correo" class="input_text">
-     <input type="text" name="tipdoc"  placeholder="tipdoc" class="input_text">
+     <input type="text" name="correo"  value="<?php if($resultado) echo $resultado['Correo']; ?>" class="input_text">
+     <input type="text" name="tipdoc"  value="<?php if($resultado) echo $resultado['id_tipdoc']; ?>" class="input_text">
      </div>
      <div class="form-group">
-          <input type="text" name="numdoc"  placeholder="numDoc" class="input_text">
-          <input type="text" name="contraseña"  placeholder="Contraseña" class="input_text">
+          <input type="text" name="numdoc"  value="<?php if($resultado) echo $resultado['numDoc']; ?>" class="input_text">
+          <input type="text" name="contraseña"  value="<?php if($resultado) echo $resultado['Contrasena']; ?>" class="input_text">
      </div>
      <div class="btn__group">
           <a href="Control_registro.php" class="btn btn__danger">Cancelar</a>
