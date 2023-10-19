@@ -4,7 +4,7 @@ include_once 'conexion.php';
 if(isset($_GET['id'])){
     $id=(int) $_GET['id'];
     
-    $buscar_id=$con->prepare('SELECT * FROM usuario WHERE id_usuario=:id');
+    $buscar_id=$con->prepare('SELECT * FROM usuario WHERE id_usuario=:id LIMIT 1');
     $buscar_id->execute(array(
         ':id'=>$id
     ));
