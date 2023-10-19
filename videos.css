@@ -3,11 +3,15 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
 
 body{
     background: url(img/fondo.png) no-repeat;
     background-size: cover;
-    color: white;
+    color: rgb(10, 10, 10);
 }
 .head {
     display: flex;
