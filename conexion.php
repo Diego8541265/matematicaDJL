@@ -11,5 +11,6 @@ $conexion = mysqli_connect($host, $User, $pass, $db);
 if (!$conexion) {
     echo "conexion fallida";
 }
+$con = new PDO('mysql:host=localhost;dbname=matematicas_djl', "root", "");
 
 ?>

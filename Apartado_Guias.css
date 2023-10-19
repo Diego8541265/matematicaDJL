@@ -1,5 +1,5 @@
 body{
-    background: url(img/M1.jpg) no-repeat;
+    background: url(img/a.png) no-repeat;
     background-size: cover;
 }
 body {
@@ -128,7 +128,7 @@ display: flex;
 /* FIN CUADROS */
 p {
     font-size: 40px;
-    color: rgb(51, 49, 49);
+    color: rgb(0, 0, 0);
     padding: 100px;
 }
 
