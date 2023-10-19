@@ -4,7 +4,7 @@ include_once 'conexion.php';
 if(isset($_GET['id'])){
     $id=(int) $_GET['id'];
     
-    $buscar_id=$con->prepare('SELECT * FROM usuario WHERE id_usuario=:id');
+    $buscar_id=$con->prepare('SELECT * FROM usuario WHERE id_usuario=:id LIMIT 1');
     $buscar_id->execute(array(
         ':id'=>$id
     ));
@@ -35,8 +35,8 @@ if(isset($_GET['id'])){
                 id_tipdoc=:id_tipdoc,
                 numDoc=:numdoc,
                 Contrasena=:contraseña
-                WHERE id=:id
-                ");
+                WHERE id=:id"
+                );
                 
                 $consulta_update->execute(array(
                   ':nom'=>$name,
