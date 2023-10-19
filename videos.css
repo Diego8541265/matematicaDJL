@@ -1,20 +1,20 @@
-
-* {
-	margin: 0;
-	padding: 0;
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
+
 body {
     text-align: center;
     font-family: sans-serif;
 }
 
-body{
-    background: url(img/fondo.png) no-repeat;
-    background-size: cover;
-    color: rgb(10, 10, 10);
-}
 .head {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 63px;
     background: #3269ff;
     position: fixed;
@@ -26,8 +26,9 @@ body{
     display: flex;
     margin-right: 10px;
 }
+
 .logo {
-    padding: 20px 20px;
+    margin-left: 30px;
 }
 
 .logo a {
@@ -46,19 +47,114 @@ body{
     font-size: 20px;
 }
 
-/* APARTADO VIDEO */
+.navbar a:hover {
+    background: #1985ff;
+}
 
-p {
-    margin-top: 65%;
-    font-size: 40px;
-    color: rgb(51, 49, 49);
-    padding: 100px;
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 289px;
+}
+
+.header {
+    background: url(img/fondo.png) no-repeat center;
+
+    background-size: cover;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.lol{
     position: relative;
-    text-align: start;
-    padding-left: 0%;
-   
+	width: 30%;
+position: relative;
+
 }
-.img{
-    margin-top: 18%;
-    margin-right: 20%;
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    padding: 0 100px;
 }
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid hsl(0, 100%, 67%);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: #6aa6ff;
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sau {
+    padding: 30px;
+    background: #ffffff
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.box-container .box {
+    height: 11rem;
+    width: 17rem;
+    background: #6fadff;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgb(91, 187, 250);
+    margin: 2rem;   
+}
+
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background: #58a6ff;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
+.contact {
+    padding-top: 20px;
+    background: #171717;
+    padding-bottom: 0;
+}
+
