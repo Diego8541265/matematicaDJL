@@ -39,7 +39,6 @@ if(isset($_GET['id'])){
                 WHERE id_usuario=:id"
                 );
                 
-                
                 $consulta_update->execute(array(
                     ':nombres' =>$name,
                     ':apellidos' =>$apell,
