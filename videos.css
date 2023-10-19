@@ -64,13 +64,7 @@ body {
     background-size: cover;
 }
 
-.title {
-    margin-bottom: 40px;
-    font-size: 60px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: rgb(0, 0, 0);
-}
+
 .lol{
     position: relative;
 	width: 30%;
@@ -79,82 +73,8 @@ position: relative;
 }
 p {
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 35px;
     color: rgb(0, 0, 0);
     padding: 0 100px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 40px;
-    border: 2px solid hsl(0, 100%, 67%);
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    background: #6aa6ff;
-}
-
-.btn:hover {
-    background: none;
-    
-}
-
-.btn-home {
-    display: flex;
-}
-
-.btn-home a {
-    margin: 0 10px;
-}
-
-
-.content {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.sau {
-    padding: 30px;
-    background: #ffffff
-}
-
-.box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-
-}
-
-.box-container .box {
-    height: 11rem;
-    width: 17rem;
-    background: #6fadff;
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0 .3rem 5rem rgb(91, 187, 250);
-    margin: 2rem;   
-}
-
-.box-container .box i {
-    height: 3rem;
-    width: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    border-radius: 50%;
-    color: rgb(255, 255, 255);
-    background: #58a6ff;
-    font-size: 2rem;
-    margin: 1rem 0;
-
-}
-
-.contact {
-    padding-top: 20px;
-    background: #171717;
-    padding-bottom: 0;
 }
 
