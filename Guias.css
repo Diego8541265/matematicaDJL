@@ -1,65 +1,79 @@
 *{
-  margin: 0;
-  padding: 0;
-}
-body {
-    background-image: url("img/M1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-body {
-    text-align: center;
-    font-family: sans-serif;
-}
-.head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 63px;
-    background: #3269ff;
-    position: fixed;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+      background-image: url("img/M1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  body {
+      text-align: center;
+      font-family: sans-serif;
+  }
+  .head {
+      display: flex;
+      align-items: center;
+      height: 63px;
+      background: #3269ff;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+  }
+  .navbar {
+      display: flex;
+      margin-right: 1px;
+      margin-left: 1350px;
+  }
+  .logo {
+      margin-left: 30px;
+  }
+  .logo a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 20px;
+  }
+  .navbar a {
+      display: block;
+      padding: 20px 20px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 20px;
+  }
+  .navbar a:hover {
+      background: #1985ff;
+  }
+  .principal{
+    position: absolute;
     width: 100%;
-    z-index: 100;
-}
-.navbar {
-    display: flex;
-    margin-right: 10px;
-}
-.logo {
-    margin-left: 30px;
-}
-.logo a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-.navbar a {
-    display: block;
-    padding: 20px 20px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-.navbar a:hover {
-    background: #1985ff;
-}
-.principal{
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  margin-top: 900px;
-}
-.boton{
-  width: 15%;
-  padding: 6%;
-  margin: 30px;
-  background-color: #6aa6ff;
-  font-size: 25px;
-  border-radius: 15px;
-  background-image: url("img/logo_guias.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
+    text-align: center;
+    margin-top: 900px;
+  }
+  .boton{
+    width: 15%;
+    padding: 6%;
+    margin: 30px;
+    background-color: #6aa6ff;
+    font-size: 25px;
+    border-radius: 15px;
+    background-image: url("img/logo_guias.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+  }
+  .btn_visible{
+      width: 10%;
+      font-size: 25px;
+   height: 1;
+      margin: 2%;
+      padding: 1%;
+      background-color: rgb(99, 162, 255);
+      border-radius: 10pc 10px;
+      transition: 0.7s;
+      background-position: center;
+      text-decoration: none;
+     color: #000000;
+  }
+  
