@@ -15,6 +15,7 @@ if(isset($_GET['id'])){
 
 
     if(isset($_POST['guardar'])){
+        $id=$_GET['id'];
         $name = $_POST['nombres'];
         $apell = $_POST['apellidos'];
         $email = $_POST['correo'];
@@ -32,20 +33,20 @@ if(isset($_GET['id'])){
                 Nombres=:nombres,
                 Apellidos=:apellidos,
                 Correo=:correo,
-                id_tipdoc=:id_tipdoc,
+                id_tipdoc=:tipdoc,
                 numDoc=:numdoc,
                 Contrasena=:contraseña
-                WHERE id=:id"
+                WHERE id_usuario=:id"
                 );
                 
                 $consulta_update->execute(array(
-                  ':nom'=>$name,
-                  ':apell'=>$apell,
-                  ':email'=>$email,
-                  ':tipdoc'=>$tipDoc,
-                  ':numdoc'=>$numDoc,
-                  ':pass'=>$hash,
-                  ':id' =>$id
+                    ':nombres' =>$name,
+                    ':apellidos' =>$apell,
+                    ':correo' =>$email,
+                    ':tipdoc' =>$tipDoc,
+                    ':numdoc' =>$numDoc,
+                    ':contraseña' =>$hash,
+                    ':id' =>$id
                 ));
                 header('Location: Control_registro.php');
             }    
@@ -73,7 +74,7 @@ if(isset($_GET['id'])){
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
      <div class="contenedor2">
     <h2>Control de Registro de Usuarios</h2>
-     <form action="nuevo_usuario_controlador.php" method="post">
+     <form action="" method="post">
      <div class="form-group">
      <input type="text" name="nombres"  value="<?php if($resultado) echo $resultado['Nombres']; ?>" class="input_text">
      <input type="text" name="apellidos"  value="<?php if($resultado) echo $resultado['Apellidos']; ?>" class="input_text">
