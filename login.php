@@ -22,7 +22,7 @@ if (isset($_POST['Correo']) && isset($_POST['Contrasena'])){
 
             if ($row['Correo'] === $Correo && $row['Contrasena'] === $Contrasena) {
                 $_SESSION['Correo'] = $row['Correo'];
-                header("Location; Apartado_Guias.html");
+                header("Location: Apartado_Guias.html");
             }else {
                 header("Location: inicio_sesion.php");
             }
