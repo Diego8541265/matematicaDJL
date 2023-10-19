@@ -33,7 +33,7 @@ if(isset($_GET['id'])){
     <h2>Control de Registro de Usuarios</h2>
      <form action="nuevo_usuario_controlador.php" method="post">
      <div class="form-group">
-     <input type="text" name="nombres"  value="<?php if($resultado) echo @$resultado['nombres']; ?>" class="input_text">
+     <input type="text" name="nombres"  value="<?php if($resultado) echo $resultado['Nombres']; ?>" class="input_text">
      <input type="text" name="apellidos"  placeholder="Apellidos" class="input_text">
      </div>
      <div class="form-group">
