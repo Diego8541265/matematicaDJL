@@ -41,7 +41,7 @@
                             </div>
                         <p><a href="registro.php">Crear cuenta</a></p>
                         </form>
-                        
+
     </body>
 </html>
 
