@@ -73,15 +73,21 @@ body {
 }
 .lol{
     position: relative;
-	width: 30%;
+	width: 100%;
 position: relative;
-
+font-size: 34px;
+}
+.lo{
+    font-size: 64px;
+    height: 120px;
+    color: rgb(0, 4, 255);
 }
 p {
     margin-bottom: 40px;
     font-size: 18px;
     color: rgb(0, 0, 0);
-    padding: 0 100px;
+    padding: 0 100x;
+    font-size: 34px;
 }
 
 .btn {
@@ -180,3 +186,107 @@ a.credi{
    
     
 }
+/* SLIDER */
+
+.c {
+    min-width: 100px;
+    width: 900px;
+    height: 900px;
+    border-radius: 12px;
+    padding: 20px;
+    padding-bottom: 40px;
+   
+  
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  
+    position: relative;
+    overflow: hidden;
+    background: hsl(0 0% 90%);
+  
+    box-sizing: border-box;
+	
+  }
+  
+  .ci {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: inherit;
+    height: inherit;
+    transform-origin: left 50%;
+  
+    background: inherit;
+  
+    z-index: var(--z);
+    transition: .3s ease-out;
+  }
+  
+  .ci img {
+    -moz-user-select: none;
+    user-select: none;
+    width: 1000px;
+	height: 900px;
+  }
+  
+  .ch {
+    position: absolute;
+    top: 70%;
+    left: 4%;
+    transform: translateY(-50%);
+  
+    font-size: 2rem;
+    color: hsla(var(--h) var(--s) var(--l) / .8);
+    text-shadow: 0 2px 10px hsla(var(--h) var(--s) 10% / .3);
+  }
+  
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -10;
+  }
+  
+  label {
+    width: 10%;
+    height: 10px;
+    margin-right: 4px;
+    border-radius: 20px;
+  
+    background: hsla(0 0% 90% / .3);
+    cursor: pointer;
+  
+    position: relative;
+    z-index: 10;
+  }
+  
+  label:last-child {
+    margin-right: 0;
+  }
+  
+  input:checked+label {
+    background: linear-gradient(to right,
+      hsla(var(--hue) 80% 70% / .7),
+      hsla(calc(var(--hue) + 30) 80% 50% / .7));
+  }
+  
+  input:not(:checked)+label+.ci {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
+  input:checked+label+.ci~.ci {
+    transform: translateX(100%);
+  }
+  
+  input:not(:checked)+label+.ci {
+    transition: 0;
+  }
+  
+ 
+
+  
+ 
