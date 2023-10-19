@@ -38,7 +38,6 @@ if(isset($_GET['id'])){
                 WHERE id=:id
                 ");
                 
-
                 $consulta_update->execute(array(
                   ':nom'=>$name,
                   ':apell'=>$apell,
