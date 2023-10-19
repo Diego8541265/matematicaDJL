@@ -1,31 +1,42 @@
 <?php
 
-//include("conexion.php");
+session_start();
+include("conexion.php");
 
-$mysqli = new mysqli("localhost", "root", "", "matematicas_djl");
+if (isset($_POST['Correo']) && isset($_POST['Contrasena'])){
+    function validate($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 
-if ($mysqli->connect_errno) {
-    die("error de conexión: " . $mysqli->connect_error);
-}
+    $Correo = validate($_POST['Correo']);
+    $Contrasena = validate($_POST['Contrasena']);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $Correo= $_POST["Correo"];
-    $Contrasena = $_POST["Contrasena"];
- 
-    $query = "SELECT * FROM usuario WHERE Correo = '$Correo' AND Contrasena = '$Contrasena'";
-    //$result = $mysqli->query($sql);
-    $result = mysqli_query($mysqli,$query);
-
-    if ($result->num_rows == 1) {
-        $_SESSION['Correo'] = $Correo;
-        header("Apartado_guias.html");
-        //echo "holaaaaa";
+    if (empty($Correo)) {
+        header("Location: inicio_sesion.php?error=El correo es requerido");
         exit();
-    } else {
-        //echo "Nombre o usuario incorrecto. Inténtelo de nuevo.";
-        header("inicio_sesion.php");
+    }elseif (empty($Contrasena)) {
+        header("Location: inicio_sesion.php?error=La contraseña es requerida");
+        exit();
+    }else{
+
+        $Sql = "SELECT * FROM usuario WHERE Correo = '$Correo' AND Contrasena='$Contrasena'";
+        $result = mysqli_queri($conexion, $Sql);
+
+        if (mysqli_num_rows($result) === 1) {
+            $row = mysqli_fetch_assoc($result);
+            if ($row['Correo'] === $Correo && $row['Contrasena'] === $Contrasena) {
+                $_SESSION['Correo'] = $row['Correo'];
+                header("Location; Apartado_Guias.html");
+                exit();
+            }else {
+                header("Location: inicio_sesion.php");
+                exit();
+            }
+        }
     }
 }
 
-$mysqli->close();
 ?>
