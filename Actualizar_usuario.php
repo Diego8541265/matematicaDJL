@@ -35,8 +35,8 @@ if(isset($_GET['id'])){
                 id_tipdoc=:id_tipdoc,
                 numDoc=:numdoc,
                 Contrasena=:contraseña
-                WHERE id=:id
-                ");
+                WHERE id=:id"
+                );
                 
                 $consulta_update->execute(array(
                   ':nom'=>$name,
