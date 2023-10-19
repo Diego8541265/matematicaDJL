@@ -14,7 +14,6 @@
   .head {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       height: 63px;
       background: #3269ff;
       position: fixed;
@@ -23,7 +22,8 @@
   }
   .navbar {
       display: flex;
-      margin-right: 10px;
+      margin-right: 1px;
+      margin-left: 1350px;
   }
   .logo {
       margin-left: 30px;
