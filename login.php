@@ -15,15 +15,15 @@ if (isset($_POST['Correo']) && isset($_POST['Contrasena'])){
     $Contrasena = validate($_POST['Contrasena']);
 
     if (empty($Correo)) {
-        header("Location: inicio_sesion.php?error=El correo es requerido");
+        header("Location: inicio_sesion.php");
         exit();
     }elseif (empty($Contrasena)) {
-        header("Location: inicio_sesion.php?error=La contraseña es requerida");
+        header("Location: inicio_sesion.php");
         exit();
     }else{
 
         $Sql = "SELECT * FROM usuario WHERE Correo = '$Correo' AND Contrasena='$Contrasena'";
-        $result = mysqli_queri($conexion, $Sql);
+        $result = mysqli_query($conexion, $Sql);
 
         if (mysqli_num_rows($result) === 1) {
             $row = mysqli_fetch_assoc($result);
