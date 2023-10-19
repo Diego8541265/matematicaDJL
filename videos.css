@@ -15,7 +15,6 @@ body{
 }
 .head {
     display: flex;
-    justify-content: space-between;
     height: 63px;
     background: #3269ff;
     position: fixed;
