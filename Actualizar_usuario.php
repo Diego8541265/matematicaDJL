@@ -15,7 +15,7 @@ if(isset($_GET['id'])){
 
 
     if(isset($_POST['guardar'])){
-        $id=$_GET['id'];
+        
         $name = $_POST['nombres'];
         $apell = $_POST['apellidos'];
         $email = $_POST['correo'];
@@ -29,14 +29,14 @@ if(isset($_GET['id'])){
             if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
              echo "<script> alert('Correo no valdo');</script>";
             }else{
-                $consulta_update=$con->prepare("UPDATE usuario SET 
+                $consulta_update=$con->prepare(' UPDATE usuario SET 
                 Nombres=:nombres,
                 Apellidos=:apellidos,
                 Correo=:correo,
                 id_tipdoc=:tipdoc,
                 numDoc=:numdoc,
                 Contrasena=:contraseña
-                WHERE id_usuario=:id"
+                WHERE id_usuario=:id'
                 );
                 
                 $consulta_update->execute(array(
@@ -45,7 +45,7 @@ if(isset($_GET['id'])){
                     ':correo' =>$email,
                     ':tipdoc' =>$tipDoc,
                     ':numdoc' =>$numDoc,
-                    ':contraseña' =>$hash,
+                    ':contraseña' =>$pass,
                     ':id' =>$id
                 ));
                 header('Location: Control_registro.php');
