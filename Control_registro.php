@@ -6,7 +6,20 @@ $sentencia_select=$con->prepare('SELECT *FROM usuario');
 $sentencia_select->execute();
 $resultado=$sentencia_select->fetchAll();
 
+// Metodo para buscar
+ if(isset($_POST['btn_buscar'])){
+    $buscar_text=$_POST['buscar'];
+    $select_buscar=$con->prepare('
+    SELECT *FROM usuario WHERE nombres LIKE :campo OR apellidos LIKE :campo;'
+);
 
+$select_buscar->execute(array(
+    ':campo' =>"%".$buscar_text."%"
+));
+
+$resultado=$select_buscar->fetchAll();
+
+ }
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +52,7 @@ $resultado=$sentencia_select->fetchAll();
     <h2>Control de Registro de Usuarios</h2>
     <div class="barra__buscador">
         <form action="" class="formulario" method="post">
-           <input type="text" name="buscar" placeholder="buscar nombre o apellidos" class="input__text">
+           <input type="text" name="buscar" placeholder="buscar nombre o apellidos" value="<?php if(isset($buscar_text)) echo $buscar_text; ?>" class="input__text">
            <input type="submit" class="btn" name="btn_buscar" value="Buscar">
            <a href="Nuevo_usuario.php" class="btn btn__nuevo">Nuevo</a>
         </form>
