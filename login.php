@@ -24,6 +24,7 @@ if (isset($_POST['Correo']) && isset($_POST['Contrasena'])){
                 header("Location: Apartado_Guias.html");
                 exit();
             }//
+            
             }else {
                 header("Location: inicio_sesion.php?error=El correo o la contraseña son incorrectos");
                 exit();
