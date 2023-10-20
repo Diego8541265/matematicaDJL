@@ -29,7 +29,23 @@
 <body>
 <section class="form-register">
       <h4>Inicio de sesion</h4>
+
                     <form action="login.php" method="POST" class="text-center">
+
+                    <hr>
+                    <?php
+                    if (isset($_GET['error'])) {
+                      ?>
+                      <p class="error">
+                        <?php
+                        echo $_GET['error']
+                        ?>
+                      </p>
+                      <?php
+                    }
+                    ?>
+
+                    <hr>
                             <div>
 
                             <input class="controls" type="email" name="Correo" id="Correo" placeholder="Ingrese su Correo">
