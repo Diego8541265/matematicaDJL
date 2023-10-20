@@ -24,7 +24,12 @@
      </div>
      <div class="form-group">
      <input type="text" name="correo"  placeholder="Correo" class="input_text">
-     <input type="text" name="tipdoc"  placeholder="tipdoc" class="input_text">
+     <select type="text" class="input_text" name="tipDoc" id="tipDoc" placeholder="tipDoc">
+  <option disabled selected="">Tipo de Documento</option>
+  <option value="CC">CC</option>
+<option value="TI">TI</option>
+
+</select>
      </div>
      <div class="form-group">
           <input type="text" name="numdoc"  placeholder="numDoc" class="input_text">
