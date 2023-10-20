@@ -54,7 +54,7 @@
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
      <div class="contenedor2">
     <h2>Control de Registro de Usuarios</h2>
-     <form action="" method="post">
+     <form action="nuevo_usuario_controlador.php" method="post">
      <div class="form-group">
      <input type="text" name="nombres"  placeholder="Nombres" class="input_text">
      <input type="text" name="apellidos"  placeholder="Apellidos" class=input_text>
