@@ -5,13 +5,21 @@ include("conexion.php");
 
 if (isset($_POST['Correo']) && isset($_POST['Contrasena'])){
 
+    function validate($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $Correo = validate($_POST['Correo']);
+    $Contrasena = validate($_POST['Contrasena']);
 
     if (empty($Correo)) {
-        header("Location: inicio_sesion.php");
+        header("Location: inicio_sesion.php?error=El correo es requerido");
     }elseif (empty($Contrasena)) {
-        header("Location: inicio_sesion.php");
+        header("Location: inicio_sesion.php?error=La contraseña es requerida");
     }else{
-
 
         $Sql = "SELECT * FROM usuario WHERE Correo = '$Correo' AND Contrasena='$Contrasena'";
         $result = mysqli_query($conexion, $Sql);
