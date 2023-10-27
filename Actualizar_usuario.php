@@ -23,7 +23,7 @@ if(isset($_GET['id'])){
         $numDoc = $_POST['numdoc'];
     
         
-        if(!empty($name)&& !empty($apell) && !empty($email)&& !empty($tipDoc)&& !empty($numDoc) ){
+        if(!empty($name)&& !empty($apell) && !empty($email)&& !empty($tipDoc)&& !empty($numDoc) && !empty($id)){
             if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
              echo "<script> alert('Correo no valdo');</script>";
             }else{
@@ -38,11 +38,13 @@ if(isset($_GET['id'])){
                 );
                 
                 $consulta_update->execute(array(
+
                     ':nombres' =>$name,
                     ':apellidos' =>$apell,
                     ':correo' =>$email,
                     ':tipdoc' =>$tipDoc,
-                    ':numdoc' =>$numDoc
+                    ':numdoc' =>$numDoc,
+                    ':id' =>$id
                 ));
                 header('Location: Control_registro.php');
             }    
