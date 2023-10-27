@@ -21,27 +21,28 @@ if(isset($_GET['id'])){
         $email = $_POST['correo'];
         $tipDoc = $_POST['tipdoc'];
         $numDoc = $_POST['numdoc'];
-        $pass = $_POST['contraseña'];
-        $hash = password_hash($pass, PASSWORD_DEFAULT, [10]);
     
         
-        if(!empty($name)&& !empty($apell) && !empty($email)&& !empty($tipDoc)&& !empty($numDoc)&& !empty($pass) ){
+        if(!empty($name)&& !empty($apell) && !empty($email)&& !empty($tipDoc)&& !empty($numDoc) ){
             if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
              echo "<script> alert('Correo no valdo');</script>";
             }else{
                 $consulta_update=$con->prepare(' UPDATE usuario SET 
                 Nombres=:nombres,
                 Apellidos=:apellidos,
+                Correo=:correo,
                 id_tipdoc=:tipdoc,
-
-                '
+                numDoc=:numdoc
+                WHERE id_usuario=:id
+               '
                 );
                 
                 $consulta_update->execute(array(
                     ':nombres' =>$name,
-                    ':apellidos' =>$apell,  
+                    ':apellidos' =>$apell,
+                    ':correo' =>$email,
                     ':tipdoc' =>$tipDoc,
-                    
+                    ':numdoc' =>$numDoc
                 ));
                 header('Location: Control_registro.php');
             }    
@@ -80,7 +81,6 @@ if(isset($_GET['id'])){
      </div>
      <div class="form-group">
           <input type="text" name="numdoc"  value="<?php if($resultado) echo $resultado['numDoc']; ?>" class="input_text">
-          <input type="text" name="contraseña"  value="<?php if($resultado) echo $resultado['Contrasena']; ?>" class="input_text">
      </div>
      <div class="btn__group">
           <a href="Control_registro.php" class="btn btn__danger">Cancelar</a>
