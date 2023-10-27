@@ -16,7 +16,7 @@ if (isset($_POST['Correo']) && isset($_POST['Contrasena'])){
     $Contrasena = validate($_POST['Contrasena']);
 
     if (empty($Correo)) {
-        header("Location: inicio_sesion.php?error=El correo es requerido");
+        header("Location: inicio_sesion.php?error=El correo y la contraseña son requeridos");
         exit();
     }else{
 
