@@ -44,7 +44,6 @@ $resultado=$select_buscar->fetchAll();
     
         <nav class="navbar">
             <a href="Apartado_Guias.html">Apartado Guias</a>
-            <a href="inicio_sesion.php">Inicio de sesión</a>
         </nav>
         </div>
 <!--tomado de : https://www.youtube.com/watch?v=Fc9X9xs4vgQ  -->
