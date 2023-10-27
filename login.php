@@ -18,7 +18,6 @@ if (isset($_POST['Correo']) && isset($_POST['Contrasena'])){
     if (empty($Correo)) {
         header("Location: inicio_sesion.php?error=El correo es requerido");
         exit();
-    }
     }else{
 
         $Sql = "SELECT * FROM usuario WHERE Correo = '$Correo' AND Contrasena='$Contrasena'";
