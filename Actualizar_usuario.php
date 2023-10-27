@@ -31,13 +31,17 @@ if(isset($_GET['id'])){
             }else{
                 $consulta_update=$con->prepare(' UPDATE usuario SET 
                 Nombres=:nombres,
-                Apellidos=:apellidos
+                Apellidos=:apellidos,
+                id_tipdoc=:tipdoc,
+
                 '
                 );
                 
                 $consulta_update->execute(array(
                     ':nombres' =>$name,
-                    ':apellidos' =>$apell  
+                    ':apellidos' =>$apell,  
+                    ':tipdoc' =>$tipDoc,
+                    
                 ));
                 header('Location: Control_registro.php');
             }    
