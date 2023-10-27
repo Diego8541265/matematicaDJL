@@ -27,7 +27,7 @@
 
 <body>
 <section class="form-register">
-      <h4>Inicio de sesion</h4>
+      <h4 class="titulo">Inicio de sesion</h4>
 
                     <form action="login.php" method="POST" class="text-center">
 
